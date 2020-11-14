@@ -6,9 +6,11 @@
       Icons made by
       <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
       <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
-      <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a>,
-      <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
-      from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+      <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a>
+      from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> <br/>
+      Images made by
+      <a href="https://unsplash.com/@cdr6934" title="ChrisRied">Chris Ried</a>
+      from <a href="https://www.unsplash.com/" title="Unsplash"> www.unsplash.com</a>
     </div>
   </div>
 </template>

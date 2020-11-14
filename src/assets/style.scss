@@ -1,0 +1,28 @@
+$bg-second: #fefefe;
+$bg-col:#F2F4F9;
+$primary: #01021E;
+$secondary: #030F8E;
+
+.flex{
+  display: flex;
+}
+.flex-col{
+  @extend .flex;
+  flex-direction: column;
+}
+.icon{
+  width: 2rem;
+  margin: 0;
+}
+.icon-text{
+  @extend .icon;
+  width: 1.2rem;
+}
+
+@import url(//fonts.googleapis.com/css?family=Roboto);
+
+body *{
+  font-family: roboto;
+  margin: 10px 5px;
+  color: $primary;
+}
