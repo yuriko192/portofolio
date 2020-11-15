@@ -2,6 +2,7 @@ $bg-second: #fefefe;
 $bg-col:#F2F4F9;
 $primary: #01021E;
 $secondary: #030F8E;
+$icon-size: 2rem;
 
 .flex{
   display: flex;
@@ -11,12 +12,16 @@ $secondary: #030F8E;
   flex-direction: column;
 }
 .icon{
-  width: 2rem;
+  width: $icon-size;
   margin: 0;
 }
 .icon-text{
   @extend .icon;
   width: 1.2rem;
+}
+.btn{
+  padding: .6rem 1rem;
+  border-radius: .5rem;
 }
 
 @import url(//fonts.googleapis.com/css?family=Roboto);

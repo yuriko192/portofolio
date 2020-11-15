@@ -3,41 +3,20 @@
     <img src="https://avatars2.githubusercontent.com/u/30367416?s=460&u=237d28568e566fc4f387769974135345aa45eabc&v=4" alt="" class="profileImage">
     <h1 class="name">Ivan Wijaya</h1>
     <h3 class="jobdesc">Computer Science Student<br/>Tarumanagara University</h3>
-    <div class="areaofinterest">
-      <h2 class="title">Area Of Interest</h2>
-      <div class="item">
-        <h4>
-          <span><img src="@/assets/fullstack.svg" alt="" class="icon-text"></span>
-          Fullstack Developer
-        </h4>
-      </div>
-      <div class="item">
-        <h4>
-          <span><img src="@/assets/UIDesign.svg" alt="" class="icon-text"></span>
-          UI Designer
-        </h4>
-      </div>
-      <div class="item">
-        <h4>
-          <span><img src="@/assets/Mobile.svg" alt="" class="icon-text"></span>
-          Mobile Programmer
-        </h4>
-      </div>
-      <div class="item">
-        <h4>
-          <span><img src="@/assets/AI.svg" alt="" class="icon-text"></span>
-          AI Engineer
-        </h4>
-      </div>
-    </div>
+    <div class="btn-cv">Get CV</div>
+    <contact-methods></contact-methods>
+    <AreaOfInterest></AreaOfInterest>
   </div>
 </template>
 
 <script>
-
+import AreaOfInterest from "@/components/AreaOfInterest";
+import ContactMethods from "@/components/ContactMethods";
 export default {
   name: 'Home',
   components: {
+    AreaOfInterest,
+    ContactMethods
   }
 }
 </script>
@@ -71,22 +50,19 @@ export default {
   *{
     z-index: 2;
   }
+  .name{
+    font-size: 3rem;
+  }
   .jobdesc{
     text-align: center;
+    font-weight: normal;
   }
-  .areaofinterest{
-    @extend .flex-col;
-    margin-top: 50px;
-    background-color: $bg-second;
-    align-self: stretch;
-    padding: 15px 10px;
-    border-radius: 10px;
-    .title{
-      text-align: center;
-    }
-    .item{
-      width: 100%;
-    }
-  }
+}
+.btn-cv{
+  @extend .btn;
+  color: $bg-col;
+  background-color: $primary;
+  //border: solid 2px $primary;
+  font-size: 1.1rem;
 }
 </style>
