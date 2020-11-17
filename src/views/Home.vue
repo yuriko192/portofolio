@@ -6,17 +6,20 @@
     <a href="https://drive.google.com/file/d/1lThHt7vgwAQk5AIwHCbaQ-hasYgcTm_s/view?usp=sharing" class="btn-cv">Get CV</a>
     <contact-methods></contact-methods>
     <AreaOfInterest></AreaOfInterest>
+    <project-list></project-list>
   </div>
 </template>
 
 <script>
 import AreaOfInterest from "@/components/AreaOfInterest";
 import ContactMethods from "@/components/ContactMethods";
+import ProjectList from "@/components/ProjectList";
 export default {
   name: 'Home',
   components: {
     AreaOfInterest,
-    ContactMethods
+    ContactMethods,
+    ProjectList
   }
 }
 </script>
