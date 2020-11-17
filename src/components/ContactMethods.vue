@@ -1,19 +1,29 @@
 <template>
   <div class="contactmethod">
     <div class="item">
-      <line-icon></line-icon>
+      <a href="https://line.me/ti/p/ivan9826">
+        <line-icon></line-icon>
+      </a>
     </div>
     <div class="item">
-      <telegram-icon></telegram-icon>
+      <a href="https://t.me/yuriko192">
+        <telegram-icon></telegram-icon>
+      </a>
     </div>
     <div class="item">
-      <reddit-icon></reddit-icon>
+      <a href="https://github.com/yuriko192">
+        <github-icon></github-icon>
+      </a>
     </div>
     <div class="item">
-      <whatsapp-icon></whatsapp-icon>
+      <a href="https://api.whatsapp.com/send/?phone=62895375547897&text&app_absent=0">
+        <whatsapp-icon></whatsapp-icon>
+      </a>
     </div>
     <div class="item">
-      <gmail-icon></gmail-icon>
+      <a href="mailto:ivanwijaya19@gmail.com">
+        <gmail-icon></gmail-icon>
+      </a>
     </div>
   </div>
 </template>
@@ -21,15 +31,16 @@
 <script>
 import gmailIcon from '@/assets/gmail'
 import lineIcon from '@/assets/line'
-import redditIcon from '@/assets/reddit'
+import githubIcon from '@/assets/github'
 import telegramIcon from '@/assets/telegram'
 import whatsappIcon from '@/assets/whatsapp'
+
 export default {
   name: "ContactMethods",
   components: {
     gmailIcon,
     lineIcon,
-    redditIcon,
+    githubIcon,
     telegramIcon,
     whatsappIcon
   },
@@ -38,7 +49,7 @@ export default {
 
 <style scoped lang=scss>
 .contactmethod {
-  $text-col : $bg-col;
+  $text-col: $bg-col;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto;
@@ -48,6 +59,7 @@ export default {
   background-color: $primary;
   justify-content: space-around;
   color: $text-col;
+
   * {
     color: $text-col;
   }
@@ -55,8 +67,9 @@ export default {
   .double-width {
     grid-column: span 2 / auto;
   }
-  .item{
-    svg{
+
+  .item {
+    svg {
       fill: $text-col;
       width: $icon-size;
       margin: 0;

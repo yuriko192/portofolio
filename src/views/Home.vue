@@ -3,7 +3,7 @@
     <img src="https://avatars2.githubusercontent.com/u/30367416?s=460&u=237d28568e566fc4f387769974135345aa45eabc&v=4" alt="" class="profileImage">
     <h1 class="name">Ivan Wijaya</h1>
     <h3 class="jobdesc">Computer Science Student<br/>Tarumanagara University</h3>
-    <div class="btn-cv">Get CV</div>
+    <a href="https://drive.google.com/file/d/1lThHt7vgwAQk5AIwHCbaQ-hasYgcTm_s/view?usp=sharing" class="btn-cv">Get CV</a>
     <contact-methods></contact-methods>
     <AreaOfInterest></AreaOfInterest>
   </div>
