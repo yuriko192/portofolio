@@ -34,8 +34,7 @@ export default {
   .item-list{
     display: flex;
     overflow: scroll;
-    width: 100vw;
-    margin: 0;
+    width: calc(100vw - 40px);
     .item{
       position: relative;
       img{
