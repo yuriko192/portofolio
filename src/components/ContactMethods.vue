@@ -41,10 +41,8 @@ export default {
 .contactmethod {
   $text-col: $bg-col;
   $text-col-2: $bg-tert;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto;
-  justify-items: center;
+  display: flex;
+  justify-content: space-around;
   margin: 10px 0;
   width: 100%;
   background-color: $primary;

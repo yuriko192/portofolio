@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <img src="@/assets/DP.png" alt="" class="profileImage">
-    <h1 class="name">Ivan Wijaya</h1>
-    <h3 class="jobdesc">Computer Science Student<br/>Tarumanagara University</h3>
-    <a href="https://drive.google.com/file/d/1lThHt7vgwAQk5AIwHCbaQ-hasYgcTm_s/view?usp=sharing" class="btn-cv">Get
-      CV</a>
+    <Hero></Hero>
     <contact-methods></contact-methods>
     <AreaOfInterest></AreaOfInterest>
     <project-list></project-list>
@@ -12,6 +8,7 @@
 </template>
 
 <script>
+import Hero from "@/components/Hero";
 import AreaOfInterest from "@/components/AreaOfInterest";
 import ContactMethods from "@/components/ContactMethods";
 import ProjectList from "@/components/ProjectList";
@@ -19,6 +16,7 @@ import ProjectList from "@/components/ProjectList";
 export default {
   name: 'Home',
   components: {
+    Hero,
     AreaOfInterest,
     ContactMethods,
     ProjectList
@@ -48,34 +46,41 @@ export default {
     background-size: cover;
   }
 
-  .profileImage {
-    margin-top: 25vh;
-    $size: 300px;
-    width: $size;
-    border-radius: $size;
-  }
 
   * {
     z-index: 2;
   }
-
-  .name {
-    font-size: 3rem;
-  }
-
-  .jobdesc {
-    text-align: center;
-    font-weight: normal;
-  }
 }
 
-.btn-cv {
-  @extend .btn;
-  font-size: 1.1rem;
-  box-shadow: 0 0 1rem rgba(black, .7);
-  transition: box-shadow 70ms;
-  &:hover{
-    box-shadow: 0 0 .1rem black;
+@media screen and (min-width: 900px) {
+  .home {
+    display: grid;
+    grid-template-areas:
+        "Hero contact"
+        "Hero AOI"
+        "projects projects";
+    grid-template-rows: 3rem auto auto;
+    grid-template-columns: 50% 50%;
+    .Hero {
+      margin: 10vh 0 0 0;
+      grid-area: Hero;
+    }
+
+    .contactmethod {
+      align-self: start;
+      margin-top: 0;
+      margin-right: 0;
+      border-radius: 0 0 0 15px;
+      grid-area: contact;
+    }
+
+    .areaofinterest {
+      grid-area: AOI;
+    }
+
+    .ProjectList {
+      grid-area: projects;
+    }
   }
 }
 </style>

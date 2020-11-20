@@ -33,7 +33,8 @@ export default {
 .ProjectList{
   .item-list{
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
     width: calc(100vw - 40px);
     .item{
       position: relative;

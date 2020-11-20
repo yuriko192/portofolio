@@ -1,6 +1,6 @@
 <template>
   <div class="areaofinterest">
-    <h2 class="title">Area Of Interest</h2>
+    <h2 class="title double-width">Area Of Interest</h2>
     <div class="item">
       <h4>
         <span><img src="@/assets/fullstack.svg" alt="" class="icon-text"></span>
@@ -46,8 +46,19 @@ components:{
   .title{
     text-align: center;
   }
-  .item{
-    width: 100%;
+}
+@media screen and (min-width: 900px){
+  .areaofinterest{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    align-self: auto;
+    .item{
+      align-items: center;
+    }
+    .double-width{
+      grid-column: span 2 / auto;
+    }
   }
 }
 </style>
