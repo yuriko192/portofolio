@@ -7,8 +7,8 @@
       <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>,
       <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>,
       <a href="https://www.flaticon.com/authors/prettycons" title="prettycons">prettycons</a>
-      from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>,
-      <a href="https://simpleicons.org/" title="Simpleicons"> www.simpleicons.org/</a>
+      from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> and
+      <a href="https://simpleicons.org/" title="Simpleicons"> www.simpleicons.org</a>
       <br/>
       Images made by
       <a href="https://unsplash.com/@cdr6934" title="ChrisRied">Chris Ried</a>
@@ -37,5 +37,6 @@
   left: 0;
   right: 0;
   background-color: $bg-second;
+  font-size: .8rem;
 }
 </style>

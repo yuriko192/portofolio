@@ -11,6 +11,10 @@
         <img src="@/assets/HotelReservation.jpg" alt="">
       </div>
       <div class="item">
+        <h3 class="title">Redesign Mbanking BCA</h3>
+        <img src="@/assets/ATMMenu.png" alt="">
+      </div>
+      <div class="item">
         <h3 class="title">Newtab Chrome Extension</h3>
         <img src="@/assets/ChromeExtension.jpg" alt="">
       </div>
