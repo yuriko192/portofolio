@@ -1,38 +1,34 @@
 <template>
   <div class="contactmethod">
     <a href="https://line.me/ti/p/ivan9826" class="contact-btn">
-      <line-icon></line-icon>
+      <LineIcon></LineIcon>
     </a>
     <a href="https://t.me/yuriko192" class="contact-btn">
-      <telegram-icon></telegram-icon>
+      <TelegramIcon></TelegramIcon>
     </a>
     <a href="https://github.com/yuriko192" class="contact-btn">
-      <github-icon></github-icon>
+      <GitHubIcon></GitHubIcon>
     </a>
     <a href="https://api.whatsapp.com/send/?phone=62895375547897&text&app_absent=0" class="contact-btn">
-      <whatsapp-icon></whatsapp-icon>
+      <WhatsAppIcon></WhatsAppIcon>
     </a>
     <a href="mailto:ivanwijaya19@gmail.com" class="contact-btn">
-      <gmail-icon></gmail-icon>
+      <GmailIcon></GmailIcon>
     </a>
   </div>
 </template>
 
 <script>
-import gmailIcon from '@/assets/gmail'
-import lineIcon from '@/assets/line'
-import githubIcon from '@/assets/github'
-import telegramIcon from '@/assets/telegram'
-import whatsappIcon from '@/assets/whatsapp'
+import {GmailIcon, LineIcon, GitHubIcon, TelegramIcon, WhatsAppIcon} from 'vue-simple-icons';
 
 export default {
   name: "ContactMethods",
   components: {
-    gmailIcon,
-    lineIcon,
-    githubIcon,
-    telegramIcon,
-    whatsappIcon
+    GmailIcon,
+    LineIcon,
+    GitHubIcon,
+    TelegramIcon,
+    WhatsAppIcon
   },
 }
 </script>

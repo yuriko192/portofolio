@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <ProjectView></ProjectView>
     <Hero></Hero>
     <contact-methods></contact-methods>
     <AreaOfInterest></AreaOfInterest>
@@ -12,10 +13,12 @@ import Hero from "@/components/Hero";
 import AreaOfInterest from "@/components/AreaOfInterest";
 import ContactMethods from "@/components/ContactMethods";
 import ProjectList from "@/components/ProjectList";
+import ProjectView from "@/components/ProjectView";
 
 export default {
   name: 'Home',
   components: {
+    ProjectView,
     Hero,
     AreaOfInterest,
     ContactMethods,
