@@ -1,9 +1,34 @@
 {
   "projects": [
     {
-      "image": "/assets/Funcraft.PNG",
+      "image": "./assets/Projects/Funcraft.PNG",
       "title": "Funcraft",
       "desc": "A task tracking gamification application aimed to increase performance and productivity"
+    },
+    {
+      "image": "./assets/Projects/DeText.png",
+      "title": "DeText",
+      "desc": "OCR application made to extract text from images made using tensorflow and flask"
+    },
+    {
+      "image": "./assets/Projects/SpeedwagonMail.jpg",
+      "title": "Speed Mail",
+      "desc": "a Mail client inspired by Speedwagon made using Vue and Mongodb"
+    },
+    {
+      "image": "./assets/Projects/MBank.png",
+      "title": "M-Bank",
+      "desc": "A redesigned BCA m banking application made using C#"
+    },
+    {
+      "image": "./assets/Projects/HotelReservation.jpg",
+      "title": "Prabu Hotel",
+      "desc": "a prototype hotel reservation system made using java"
+    },
+    {
+      "image": "./assets/Projects/Confins.PNG",
+      "title": "Confins",
+      "desc": "Core banking system made by the company AdIns"
     }
   ]
 }
