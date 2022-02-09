@@ -1,0 +1,9 @@
+{
+  "projects": [
+    {
+      "image": "./assets/Projects/Funcraft.PNG",
+      "title": "Funcraft",
+      "desc": "A task tracking gamification application aimed to increase performance and productivity"
+    }
+  ]
+}

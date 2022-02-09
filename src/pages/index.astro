@@ -1,0 +1,71 @@
+---
+// Component imports and setup JavaScript go here!
+import ProjectList from '../components/ProjectList.svelte';
+---
+
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <style global>
+        @import "../styles/global.css";
+    </style>
+    <title>Welcome to Astro</title>
+    <style>
+        .subJob > * {
+            @apply bg-gray-800 py-1 px-1 text-white
+        }
+        .BGImg{
+            z-index: -2;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0), whitesmoke 70%), url("./assets/BG.jpg");
+            background-repeat: no-repeat;
+            background-position: top;
+            background-size: cover;
+        }
+        .BGCov{
+            opacity: 0.4;
+            z-index: -1;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* scoped CSS styles go here: */
+        /* h1 { ... } */
+    </style>
+</head>
+
+<body>
+<section class="relative">
+    <!--Intro-->
+    <div class="BGImg absolute"></div>
+    <div class="BGCov bg-gray-100"></div>
+    <div class="px-5 py-16 relative">
+        <h2 class="text-xl mb-2">Hello There, The name is</h2>
+        <h1 class="font-bold text-4xl">Ivan Wijaya</h1>
+        <span class="text-xl">💻 Software Engineer</span>
+        <div class="subJob my-4 grid gap-4 grid-flow-col grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
+            <div class="col-span-4 sm:col-span-2 lg:col-span-1">🖥️ Fullstack Developer</div>
+            <div class="col-span-4 sm:col-span-2 lg:col-span-1">📱 Mobile Software Developer</div>
+            <div class="col-span-2 sm:col-span-2 lg:col-span-1">👾 AI Engineer</div>
+            <div class="col-span-2 sm:col-span-2 lg:col-span-1">🖼️ UI Designer</div>
+        </div>
+    </div>
+</section>
+<section class="px-5 py-16 relative">
+    <!--Past Projects-->
+    <ProjectList client:load />
+</section>
+<section>
+    <!--About Me-->
+</section>
+<section>
+    Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/tech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+</section>
+</body>
+</html>
