@@ -1,0 +1,9 @@
+{
+  "jobs": [
+    {
+      "image": "./assets/Projects/Confins.PNG",
+      "title": "Fullstack Developer",
+      "desc": "Develop a core banking system for the company AdIns"
+    }
+  ]
+}

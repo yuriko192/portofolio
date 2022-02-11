@@ -24,11 +24,6 @@
       "image": "./assets/Projects/HotelReservation.jpg",
       "title": "Prabu Hotel",
       "desc": "a prototype hotel reservation system made using java"
-    },
-    {
-      "image": "./assets/Projects/Confins.PNG",
-      "title": "Confins",
-      "desc": "Core banking system made by the company AdIns"
     }
   ]
 }
