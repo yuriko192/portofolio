@@ -1,8 +1,9 @@
-<script>
-    import * as ProjectJson from '../Data/Projects.json'
+<script lang="ts">
+    import ProjectJson from '../Data/Projects.json'
+    import {ProjectObj} from "../objects/ProjectObj";
 
     let isShowDetail = false;
-    let currProject = {};
+    let currProject:ProjectObj = new ProjectObj();
 
     function showDetail(Cond, Project) {
         isShowDetail = Cond;
@@ -64,7 +65,7 @@
              style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currProject.image+');'}"></div>
         <h1 class="mt-[10%] absolute text-3xl font-bold w-full text-center align-middle text-white">{currProject.title}</h1>
         <div class="absolute bg-gray-900 bottom-0 w-full h-2/5 p-3">
-            <p class="text-white">{currProject.desc}</p>
+            <p class="text-white">{currProject.details.desc}</p>
         </div>
     </div>
 </div>
