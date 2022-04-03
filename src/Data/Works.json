@@ -2,8 +2,13 @@
   "jobs": [
     {
       "image": "./assets/Projects/Confins.PNG",
-      "title": "Fullstack Developer",
-      "desc": "Develop a core banking system for the company AdIns"
+      "title": "PT. AdIns",
+      "desc": "Fullstack Developer - Develop a core banking system called Confins"
+    },
+    {
+      "image": "./assets/Projects/Tokopedia.png",
+      "title": "PT. Tokopedia",
+      "desc": "Backend Software Engineer - Maintain and develop backend feature for Tokopedia E-Commerce Website"
     }
   ]
 }

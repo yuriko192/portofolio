@@ -3,11 +3,12 @@
     import {ProjectObj} from "../objects/ProjectObj";
 
     let isShowDetail = false;
-    let currProject:ProjectObj = new ProjectObj();
+    let currProject: ProjectObj = new ProjectObj();
 
     function showDetail(Cond, Project) {
         isShowDetail = Cond;
         currProject = Project;
+        console.log(currProject)
     }
 </script>
 <style lang="scss">
@@ -60,12 +61,27 @@
 </div>
 <div class="fixed top-0 left-0 h-screen w-screen z-50 modalCont grid backdrop-blur p-4 {isShowDetail? 'block':'hidden'}"
      on:click={(e)=>{if(e.target===e.currentTarget)showDetail(false, currProject)}}>
-    <div class="relative place-self-center w-full max-w-[47.375rem] h-full max-h-[84rem] bg-gray-50 rounded shadow z-50">
-        <div class="absolute BGImg"
-             style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currProject.image+');'}"></div>
-        <h1 class="mt-[10%] absolute text-3xl font-bold w-full text-center align-middle text-white">{currProject.title}</h1>
-        <div class="absolute bg-gray-900 bottom-0 w-full h-2/5 p-3">
-            <p class="text-white">{currProject.details.desc}</p>
+    <div class="place-self-center w-full max-w-[47.375rem] h-full max-h-[84rem] bg-gray-50 rounded shadow z-50">
+        <div class="grid grid-rows-5 h-full">
+            <div class="row-span-2 w-full flex items-center relative justify-between">
+                <div class="absolute BGImg"
+                     style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currProject.image+');'}"></div>
+                <h1 class="font-bold text-white text-5xl ml-10 px-10 py-3">{currProject.title}</h1>
+            </div>
+            <div class="row-span-3 bg-gray-900 w-full p-3 grid grid-cols-4 gap-4">
+                <div class="col-span-3 text-white">
+                    <h2 class="font-bold text-xl pt-3">Description:</h2>
+                    <br>
+                    <p class="">{currProject.details.desc}</p>
+                </div>
+                <div class="col-span-1 text-white">
+                    <h2 class="font-bold text-xl pt-3">Frameworks:</h2>
+                    {#each currProject.details.frameworks as framework}
+                        <br>
+                        <p class="">{framework}</p>
+                    {/each}
+                </div>
+            </div>
         </div>
     </div>
 </div>
