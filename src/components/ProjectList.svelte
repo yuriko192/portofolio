@@ -8,7 +8,7 @@
     function showDetail(Cond, Project) {
         isShowDetail = Cond;
         currProject = Project;
-        console.log(currProject)
+        // console.log(currProject)
     }
 </script>
 <style lang="scss">
