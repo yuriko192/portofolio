@@ -9,6 +9,7 @@ module.exports = {
             screens: {
                 'tall': { 'raw': '(min-height: 800px)' },
                 'xtall': { 'raw': '(min-height: 1000px)' },
+                'med': { 'raw': '(min-width: 768px)' },
             }
         }
     }

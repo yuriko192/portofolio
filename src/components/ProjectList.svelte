@@ -12,6 +12,19 @@
     }
 </script>
 <style lang="scss">
+  @media screen and (min-width: 780px) {
+    .customClass{
+      display: grid;
+    }
+  }
+  @media screen and (max-width: 779px) {
+    .customClass{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+
   .BGImg {
     z-index: -2;
     position: absolute;
@@ -44,7 +57,9 @@
             <div>
                 <div class="absolute BGImg"
                      style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+project.image+');'}"></div>
-                <h1 class="mt-[10%] absolute text-3xl font-bold w-full text-center align-middle text-white">{project.title}</h1>
+                <div class="absolute h-full w-full grid pb-16">
+                    <h1 class="place-self-center text-3xl font-bold w-full text-center align-middle text-white">{project.title}</h1>
+                </div>
                 <div class="absolute bg-gray-900 bottom-0 w-full h-2/5 p-3">
                     <p class="text-white">{project.desc}</p>
                 </div>
@@ -61,15 +76,17 @@
 </div>
 <div class="fixed top-0 left-0 h-screen w-screen z-50 modalCont grid backdrop-blur p-4 {isShowDetail? 'block':'hidden'}"
      on:click={(e)=>{if(e.target===e.currentTarget)showDetail(false, currProject)}}>
-    <div class="place-self-center w-full max-w-[47.375rem] h-full max-h-[84rem] bg-gray-50 rounded shadow z-50">
+    <div class="relative place-self-center bg-gray-50 rounded shadow z-50" style="width: min(50.375rem, 100%); height: min(100%, 84rem); overflow: scroll">
+        <div class="absolute bg-gray-900 w-full h-full -z-50">
+        </div>
         <div class="grid grid-rows-5 h-full">
             <div class="row-span-2 w-full flex items-center relative justify-between">
                 <div class="absolute BGImg"
                      style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currProject.image+');'}"></div>
                 <h1 class="font-bold text-white text-5xl ml-10 px-10 py-3">{currProject.title}</h1>
             </div>
-            <div class="row-span-3 bg-gray-900 w-full p-3 grid grid-cols-4 gap-4">
-                <div class="col-span-3 text-white">
+            <div class="bg-gray-900 row-span-3 h-fit w-full p-3 grid-cols-4 gap-4 customClass">
+                <div class="col-span-3 text-white z-10">
                     <h2 class="font-bold text-xl pt-3">Description:</h2>
                     <br>
                     <p class="">{currProject.details.desc}</p>

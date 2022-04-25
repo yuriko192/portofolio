@@ -49,7 +49,7 @@
       "title": "Speed Mail",
       "desc": "a Mail client inspired by Speedwagon made using Vue and Mongodb",
       "details": {
-        "desc": "M-Bank is a redesigned BCA m banking application made using C#. M-Bank was made as a submission for a class project aimed to better understand how to create a desktop GUI application. M-Bank was made using frameworks such as ASP.Net, and SQL Server.",
+        "desc": "SpeedMail is a Mail client inspired by the anime character Speedwagon from the anime JoJo. Speedmail was made as a submission for a class project to better understand the web tech stack. SpeedMail was made using frameworks such as VueJs, ExpressJs, Bootstrap, and MongoDB.",
         "client": {
           "name": "Universitas Tarumanagara",
           "image": "./assets/Clients/Untar.PNG"
@@ -73,7 +73,7 @@
       "title": "M-Bank",
       "desc": "A redesigned BCA m banking application made using C#",
       "details": {
-        "desc": "SpeedMail is a Mail client inspired by the anime character Speedwagon from the anime JoJo. Speedmail was made as a submission for a class project to better understand the web tech stack. SpeedMail was made using frameworks such as VueJs, ExpressJs, Bootstrap, and MongoDB.",
+        "desc": "M-Bank is a redesigned BCA m banking application made using C#. M-Bank was made as a submission for a class project aimed to better understand how to create a desktop GUI application. M-Bank was made using frameworks such as ASP.Net, and SQL Server.",
         "client": {
           "name": "Universitas Tarumanagara",
           "image": "./assets/Clients/Untar.PNG"
