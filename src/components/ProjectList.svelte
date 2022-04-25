@@ -76,7 +76,7 @@
 </div>
 <div class="fixed top-0 left-0 h-screen w-screen z-50 modalCont grid backdrop-blur p-4 {isShowDetail? 'block':'hidden'}"
      on:click={(e)=>{if(e.target===e.currentTarget)showDetail(false, currProject)}}>
-    <div class="relative place-self-center bg-gray-50 rounded shadow z-50" style="width: min(50.375rem, 100%); height: min(100%, 84rem); overflow: scroll">
+    <div class="relative place-self-center bg-gray-50 rounded shadow z-50" style="width: min(50.375rem, 100%); height: min(100%, 84rem); overflow: auto">
         <div class="absolute bg-gray-900 w-full h-full -z-50">
         </div>
         <div class="grid grid-rows-5 h-full">
