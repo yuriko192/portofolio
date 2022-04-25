@@ -21,7 +21,9 @@
         <div class="relative h-64 pt-[10%]">
             <div class="absolute BGImg"
                  style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+job.image+');'}"></div>
-            <h1 class="absolute text-3xl font-bold w-full text-center align-middle text-white">{job.title}</h1>
+            <div class="absolute h-full w-full grid pb-16">
+                <h1 class="place-self-center text-3xl font-bold w-full text-center align-middle text-white">{job.title}</h1>
+            </div>
             <div class="absolute bg-gray-900 bottom-0 w-full h-2/5 p-3">
                 <p class="text-white">{job.desc}</p>
             </div>
