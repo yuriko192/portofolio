@@ -13,12 +13,12 @@
 </script>
 <style lang="scss">
   @media screen and (min-width: 780px) {
-    .customClass{
+    .ProjectModalDesc{
       display: grid;
     }
   }
   @media screen and (max-width: 779px) {
-    .customClass{
+    .ProjectModalDesc{
       display: flex;
       flex-direction: column;
     }
@@ -85,7 +85,7 @@
                      style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currProject.image+');'}"></div>
                 <h1 class="font-bold text-white text-5xl ml-10 px-10 py-3">{currProject.title}</h1>
             </div>
-            <div class="bg-gray-900 row-span-3 h-fit w-full p-3 grid-cols-4 gap-4 customClass">
+            <div class="bg-gray-900 row-span-3 h-fit w-full p-3 grid-cols-4 gap-4 ProjectModalDesc">
                 <div class="col-span-3 text-white z-10">
                     <h2 class="font-bold text-xl pt-3">Description:</h2>
                     <br>
