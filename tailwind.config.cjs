@@ -1,17 +1,8 @@
-// tailwind.config.cjs
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: [
-        './public/**/*.html',
-        './src/**/*.{astro,js,jsx,svelte,ts,tsx,vue}',
-    ],
-    theme: {
-        extend: {
-            screens: {
-                'tall': { 'raw': '(min-height: 800px)' },
-                'xtall': { 'raw': '(min-height: 1000px)' },
-                'med': { 'raw': '(min-width: 768px)' },
-            }
-        }
-    }
-    // more options here
-};
+  content: ['./src/**/*.{html,js,svelte,ts}'],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
