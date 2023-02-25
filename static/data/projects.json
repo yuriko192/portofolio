@@ -1,0 +1,112 @@
+{
+  "projects": [
+    {
+      "image": "./assets/Projects/Funcraft.PNG",
+      "title": "Funcraft",
+      "desc": "A task tracking gamification application aimed to increase performance and productivity",
+      "details": {
+        "desc": "Funcraft is a task tracking gamification aimed to increase performance and productivity. Funcraft was made as a submission for a business case competition by Mandiri Tunas Finance and became a finalist. Funcraft as a Web Application utilizing frameworks such as VueJs, ExpressJs, and MySql.",
+        "client": {
+          "name": "Mandiri Tunas Finance",
+          "image": "./assets/Projects/Funcraft.PNG"
+        },
+        "frameworks": [
+          "VueJs",
+          "Sass",
+          "MySql",
+          "Axios",
+          "ExpressJs"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/DeText.png",
+      "title": "DeText",
+      "desc": "OCR application made to extract text from images made using tensorflow and flask",
+      "details": {
+        "desc": "DeText is an OCR application made to extract text from images. Detext is an application submitted as the GUI for a thesis project involving AI Tech such as CNN, LSTM, and Mask R-CNN. DeText was made using frameworks such as Tensorflow, Keras, Flask, and Svelte",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "Tensorflow",
+          "Keras",
+          "Flask",
+          "Svelte",
+          "Tailwinds CSS"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/SpeedwagonMail.jpg",
+      "title": "Speed Mail",
+      "desc": "a Mail client inspired by Speedwagon made using Vue and Mongodb",
+      "details": {
+        "desc": "SpeedMail is a Mail client inspired by the anime character Speedwagon from the anime JoJo. Speedmail was made as a submission for a class project to better understand the web tech stack. SpeedMail was made using frameworks such as VueJs, ExpressJs, Bootstrap, and MongoDB.",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "VueJs",
+          "ExpressJs",
+          "Bootstrap",
+          "MongoDB",
+          "Sass",
+          "Axios",
+          "JQuery"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/MBank.png",
+      "title": "M-Bank",
+      "desc": "A redesigned BCA m banking application made using C#",
+      "details": {
+        "desc": "M-Bank is a redesigned BCA m banking application made using C#. M-Bank was made as a submission for a class project aimed to better understand how to create a desktop GUI application. M-Bank was made using frameworks such as ASP.Net, and SQL Server.",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "ASP.Net",
+          "SQL Server"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/HotelReservation.jpg",
+      "title": "Prabu Hotel",
+      "desc": "a prototype hotel reservation system made using java",
+      "details": {
+        "desc": "Prabu Hotel is a prototype hotel reservation system made using java. Prabu Hotel was made as a submission for a class project to better understand ways of implementing OOP. Prabu Hotel was made using frameworks such as Spring Boot, Apache Velocity, Maven, and Oracle DB",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "Spring Boot",
+          "Apache Velocity",
+          "Maven",
+          "Oracle DB"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    }
+  ]
+}
