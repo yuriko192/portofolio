@@ -1,6 +1,6 @@
 <script lang="ts">
     import "./app.scss"
-    import type {subJobType} from "../types.js";
+    import type {scrambledTextAnimationObj, subJobType} from "../types.js";
     import {onMount} from "svelte";
     import {SaveLocalstorageSet} from "../utils";
     import ProjectList from "$lib/components/ProjectList.svelte";
@@ -13,7 +13,7 @@
 
     let subJobs: subJobType[] = [];
 
-    let interval = null;
+    let currScrText:scrambledTextAnimationObj;
 
     onMount(async () => {
         const response = await fetch('/data/subjobs.json');
@@ -59,8 +59,12 @@
     function onSubJobsHover(idx) {
         let iteration = 0;
 
-        clearInterval(interval);
-        interval = setInterval(() => {
+        if(currScrText){
+            clearInterval(currScrText.interval);
+            subJobs[currScrText.idx].desc = subJobs[currScrText.idx].originalDesc
+        }
+
+        let interval = setInterval(() => {
             subJobs[idx].desc = subJobs[idx].originalDesc
                 .split("")
                 .map((letter, index) => {
@@ -81,6 +85,11 @@
             }
             iteration += 1 / 3;
         }, 20);
+
+        currScrText = {
+            idx: idx,
+            interval: interval
+        }
     }
 </script>
 

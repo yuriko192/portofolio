@@ -25,3 +25,8 @@ export interface ClientObj {
     name: string;
     image: string;
 }
+
+export interface scrambledTextAnimationObj{
+    interval: any;
+    idx: number;
+}
