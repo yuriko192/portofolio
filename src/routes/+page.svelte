@@ -3,6 +3,7 @@
     import type {subJobType} from "../types.js";
     import {onMount} from "svelte";
     import {SaveLocalstorageSet} from "../utils";
+    import ProjectList from "$lib/components/ProjectList.svelte";
 
     const DARK = 'dark'
     const LIGHT = 'light'
@@ -11,18 +12,17 @@
     let isDarkMode = true
 
     let subJobs: subJobType[] = [];
-    let loading = true;
 
     let interval = null;
 
     onMount(async () => {
         const response = await fetch('/data/subjobs.json');
         let resultJson = await response.json();
-        let result:subJobType[] = resultJson["subjobs"].map(
-            item=>(
+        let result: subJobType[] = resultJson["subjobs"].map(
+            item => (
                 {
                     ...item,
-                    originalDesc : item.desc.toUpperCase(),
+                    originalDesc: item.desc.toUpperCase(),
                     desc: item.desc.toUpperCase()
                 }
             )
@@ -31,7 +31,8 @@
         subJobs = [...subJobs, ...result];
 
         typeof localStorage === 'undefined'
-            ? (() => {})()
+            ? (() => {
+            })()
             : (() => {
                 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     isDarkMode = true
@@ -41,8 +42,6 @@
                     document.documentElement.classList.remove('dark')
                 }
             })();
-
-        loading = false
     });
 
     function toggleDark() {
@@ -57,23 +56,27 @@
         }
     }
 
-    function onSubJobsHover(idx){
+    function onSubJobsHover(idx) {
         let iteration = 0;
 
         clearInterval(interval);
         interval = setInterval(() => {
-            subJobs[idx].desc  = subJobs[idx].originalDesc
-                    .split("")
+            subJobs[idx].desc = subJobs[idx].originalDesc
+                .split("")
                 .map((letter, index) => {
-                    if(index < iteration) {
+                    if (index < iteration) {
                         return subJobs[idx].originalDesc[index];
                     }
 
-                    return letters[Math.floor(Math.random() * 26)]
+                    if(index< iteration+5){
+                        return letters[Math.floor(Math.random() * 26)]
+                    }
+
+                    return ""
                 })
                 .join("");
 
-            if(iteration >= subJobs[idx].originalDesc.length){
+            if (iteration >= subJobs[idx].originalDesc.length) {
                 clearInterval(interval);
             }
             iteration += 1 / 3;
@@ -126,5 +129,8 @@
             >{subJob.icon} {subJob.desc}
             </div>
         {/each}
+        <div class="hidden col-span-4 sm:col-span-2 lg:col-span-1 col-span-4 sm:col-span-2 lg:col-span-1 col-span-2 sm:col-span-2 lg:col-span-1 col-span-2 sm:col-span-2 lg:col-span-1"></div>
     </div>
+
+    <ProjectList/>
 </div>

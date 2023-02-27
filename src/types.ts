@@ -4,3 +4,24 @@ export interface subJobType {
     originalDesc:string;
     icon: string;
 }
+
+
+export interface ProjectObj {
+    image: string;
+    title: string;
+    desc: string;
+    details: ProjectDetailObj;
+}
+
+export interface ProjectDetailObj {
+    desc: string;
+    frameworks: Array<string>;
+    images: Array<string>;
+    client: ClientObj;
+
+}
+
+export interface ClientObj {
+    name: string;
+    image: string;
+}
