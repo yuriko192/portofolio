@@ -1,7 +1,7 @@
 {
   "subjobs": [
     {
-      "spans": "col-span-4 sm:col-span-2 lg:col-span-1",
+      "spans": "col-span-4 sm:col-span-2 lg:col-span-1 font-bold",
       "desc": "Fullstack Developer",
       "icon": "\uD83D\uDDA5️"
     },

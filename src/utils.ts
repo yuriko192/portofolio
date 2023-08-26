@@ -1,4 +1,4 @@
-export function SaveLocalstorageSet(key: string,value: string) :boolean{
+export function LocalstorageSet(key: string,value: string) :boolean{
     if (typeof localStorage === 'undefined'){
         return false
     }
@@ -6,7 +6,7 @@ export function SaveLocalstorageSet(key: string,value: string) :boolean{
     return true;
 }
 
-export function SaveLocalstorageGet(key: string): string | null {
+export function LocalstorageGet(key: string): string | null {
     if (typeof localStorage === 'undefined') {
         return null;
     }
