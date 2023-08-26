@@ -4,6 +4,7 @@
     import {onMount} from "svelte";
     import {SaveLocalstorageSet} from "../utils";
     import ProjectList from "$lib/components/ProjectList.svelte";
+    import WorkList from "$lib/components/WorkList.svelte";
 
     const DARK = 'dark'
     const LIGHT = 'light'
@@ -99,8 +100,12 @@
 
 <div class="dark:bg-slate-800 bg-white dark:text-slate-100 px-8 py-2 min-h-screen overflow-hidden z-[-99]">
 
-    <div class="flex mb-4 mt-4">
-        <div class="flex-auto flex justify-items-center items-center">
+<!--    NAVBAR-->
+    <div class="flex mb-4 mt-4 gap-4">
+        <div class="flex flex-grow justify-items-center items-center">
+            <span>IVAN.W</span>
+        </div>
+        <div class="flex justify-items-center items-center">
             <a href="https://drive.google.com/file/d/1lThHt7vgwAQk5AIwHCbaQ-hasYgcTm_s/view?usp=sharing"
                class="
                rounded-lg py-1 px-3 shadow-lg hover:shadow
@@ -110,7 +115,7 @@
                 Get CV
             </a>
         </div>
-        <div>
+        <div class="flex flex-row-reverse">
             <div class="relative rounded-full border border-black dark:border-slate-100 py-1 w-14 h-8 transition-transform duration-300"
                  on:click={toggleDark}>
                 <div class={`absolute transition-transform ${isDarkMode ? 'translate-x-2' : 'translate-x-8'}`}>
@@ -123,13 +128,13 @@
             </div>
         </div>
     </div>
-
-
+<!--    HERO TITLE-->
     <div class="mt-8">
         <h2 class="text-xl">Hello There, The name is</h2>
         <h1 class="font-bold text-4xl my-2">Ivan Wijaya</h1>
         <span class="text-xl">💻 Software Engineer</span>
     </div>
+<!--    SUBJOBS-->
     <div class="my-4 grid gap-4 grid-flow-col grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
         {#each subJobs as subJob, idx}
             <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 ${subJob.spans}`}
@@ -142,4 +147,7 @@
     </div>
 
     <ProjectList/>
+    <WorkList/>
+
+
 </div>

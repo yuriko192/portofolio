@@ -17,7 +17,7 @@
         let result:ProjectObj[] = resultJson["projects"]
         projectList = [...projectList, ...result];
 
-        console.log(projectList)
+        // console.log(projectList)
     });
 </script>
 <style lang="scss">
@@ -35,7 +35,6 @@
 
 
   .BGImg {
-    z-index: -2;
     position: absolute;
     top: 0;
     left: 0;
