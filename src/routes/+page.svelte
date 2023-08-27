@@ -33,8 +33,7 @@
         subJobs = [...subJobs, ...result];
 
         typeof localStorage === 'undefined'
-            ? (() => {
-            })()
+            ? (() => {})()
             : (() => {
                 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                     isDarkMode = true
@@ -171,11 +170,11 @@
     {/if}
 </div>
 
-<div class="dark:text-slate-100 px-8 py-2 min-h-screen" on:pointermove={handleBlobMove}>
+<div class="dark:text-slate-100 px-8 py-2 min-h-screen overflow-hidden" on:pointermove={handleBlobMove}>
 
     <!--    NAVBAR-->
     <div class="flex mb-4 mt-4 gap-4s">
-        <div class="flex flex-grow justify-items-center items-center">
+        <div class="flex flex-grow justify-items-center items-center font-bold">
             <span>IVAN.W</span>
         </div>
         <div class="flex justify-items-center items-center mx-4">
