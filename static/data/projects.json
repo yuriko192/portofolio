@@ -1,6 +1,80 @@
 {
   "projects": [
     {
+      "image": "./assets/Projects/Confins.PNG",
+      "title": "Confins",
+      "desc": "A core banking system developed to be the backbone of Indonesian finances",
+      "details": {
+        "desc": "Confins is a core banking system that I helped develop with the teams in AdIns (Advance Innovations) to help financial instituion manage large scale transactions. The system is used to help manage loan application, credit scoring, collateral appraisal, collection system, and many more. It's built using angularJS, SQL Server, ASP.NET, and RabbitMQ",
+        "client": {
+          "name": "AdIns (Advance Innovations)",
+          "image": "./assets/Projects/AdIns.png"
+        },
+        "frameworks": [
+          "AngularJS",
+          "SQL Server",
+          "ASP.NET",
+          "C#",
+          "RabbitMQ"
+        ],
+        "images": [
+          "./assets/Projects/Confins.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/TokopediaPlus.png",
+      "title": "Tokopedia Plus",
+      "desc": "A subscription service that gives exclusive benefits in Tokopedia",
+      "details": {
+        "desc": "Tokopedia Plus is a subscription service that I developed together with the team from Tokopedia that aims to help it's customer save more for every transaction in tokopedia by giving special benefits to it's subscriber. It's built using NSQ, gRPC, Go, Java, PostgreQL, Yugabyte, Redis, and React",
+        "client": {
+          "name": "GoTo Tokopedia",
+          "image": "./assets/Projects/Tokopedia.png"
+        },
+        "frameworks": [
+          "NSQ",
+          "gRPC",
+          "Go",
+          "Java",
+          "PostgreQL",
+          "Yugabyte",
+          "Redis",
+          "React"
+        ],
+        "images": [
+          "./assets/Projects/TokopediaPlus.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/TokopediaSite.png",
+      "title": "Coupon Management",
+      "desc": "A loyalty program by that aims to distribute suitable coupon to Tokopedia users",
+      "details": {
+        "desc": "Coupon Management is a benefit distribution system that I developed with the team in Tokopedia that aims to effectively distribute coupon to users in tokopedia by analyzing users behaviour, predicting their next transaction, and giving appropriate coupon with their next transaction. This system is built using Tensorflow, Flask, NSQ, gRPC, Go, Python, PostgreQL, Yugabyte, Redis, and React",
+        "client": {
+          "name": "GoTo Tokopedia",
+          "image": "./assets/Projects/Tokopedia.png"
+        },
+        "frameworks": [
+          "Tensorflow",
+          "Flask",
+          "NSQ",
+          "gRPC",
+          "Go",
+          "Python",
+          "PostgreQL",
+          "Yugabyte",
+          "Redis",
+          "React"
+        ],
+        "images": [
+          "./assets/Projects/TokopediaSite.png"
+        ]
+      }
+    },
+    {
       "image": "./assets/Projects/Funcraft.PNG",
       "title": "Funcraft",
       "desc": "A task tracking gamification application aimed to increase performance and productivity",
