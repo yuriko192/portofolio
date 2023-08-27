@@ -178,7 +178,7 @@
             <span>IVAN.W</span>
         </div>
         <div class="flex justify-items-center items-center mx-4">
-            <a href="https://drive.google.com/file/d/1lThHt7vgwAQk5AIwHCbaQ-hasYgcTm_s/view?usp=sharing"
+            <a href="https://drive.google.com/file/d/1uVZdRZIvT5WF19So0d63yTEizPci3YvQ/view?usp=sharing"
                class="
                rounded-lg py-1 px-3 shadow-lg hover:shadow
                dark:hover:bg-slate-400 dark:bg-slate-300 dark:text-black dark:font-semibold dark:shadow-slate-500
