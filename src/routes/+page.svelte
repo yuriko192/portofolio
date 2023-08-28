@@ -137,7 +137,6 @@
   //TODO
   //ADD DARK & LIGHT MODE
   #blob {
-    background-color: white;
     height: 34vmax;
     aspect-ratio: 1;
     position: absolute;
@@ -145,7 +144,7 @@
     top: 50%;
     translate: -50% -50%;
     border-radius: 50%;
-    background: linear-gradient(to right, aquamarine, mediumpurple);
+    background: white linear-gradient(to right, aquamarine, mediumpurple);
     animation: rotate 20s infinite;
     opacity: 0.8;
   }
@@ -187,6 +186,7 @@
             </a>
         </div>
         <div class="flex flex-row-reverse">
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
             <div class="relative rounded-full border border-black dark:border-slate-100 py-1 w-14 h-8 transition-transform duration-300"
                  on:click={toggleDark}>
                 <div class={`absolute transition-transform ${isDarkMode ? 'translate-x-2' : 'translate-x-8'}`}>
@@ -200,9 +200,9 @@
         </div>
     </div>
     <!--    HERO TITLE-->
-    <div class="flex py-5 align-middle flex flex-col sm:flex-row">
+    <div class="flex py-5 align-middle flex-col sm:flex-row">
         <div class="shrink-0 m-auto mb-8 px-8">
-            <img class="rounded-full w-full max-w-[16rem] aspect-square" src={selfImg}>
+            <img class="rounded-full w-full max-w-[16rem] aspect-square" src={selfImg} alt="ivan wijaya">
         </div>
         <div class="my-auto">
             <h1 class="text-xl font-bold mb-4 text-justify">Hello There, My name is Ivan Wijaya</h1>
@@ -220,15 +220,15 @@
         </div>
     </div>
     <!--    SUBJOBS-->
-    <div class="my-4 grid gap-4 grid-flow-col grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
+    <div class="my-4 grid gap-4 grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
         {#each subJobs as subJob, idx}
+            <!-- svelte-ignore a11y-mouse-events-have-key-events -->
             <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 ${subJob.spans}`}
                  on:mouseover={()=>{onSubJobsHover(idx)}}
                  on:mouseleave={()=>{subJobs[idx].desc = subJobs[idx].originalDesc}}
             >{subJob.icon} {subJob.desc}
             </div>
         {/each}
-        <div class="hidden col-span-4 sm:col-span-2 lg:col-span-1 col-span-4 sm:col-span-2 lg:col-span-1 col-span-2 sm:col-span-2 lg:col-span-1 col-span-2 sm:col-span-2 lg:col-span-1"></div>
     </div>
 
     <Showcases Title="Featured Projects" JsonURL="/data/projects.json"/>

@@ -85,6 +85,7 @@
                     </div>
                 </div>
                 {#if (showcase.details)}
+                    <!-- svelte-ignore a11y-click-events-have-key-events -->
                     <div class="absolute w-full h-full dark-BG grid transition"
                          on:click={()=>{showDetail(true, showcase)}}>
                         <div class="place-self-center overflow-hidden p-1">
@@ -98,6 +99,7 @@
         {/each}
     </div>
     {#if (isShowDetail)}
+        <!-- svelte-ignore a11y-click-events-have-key-events -->
         <div class="fixed top-0 left-0 h-screen w-screen z-50 modalCont grid backdrop-blur p-4"
              on:click={(e)=>{if(e.target===e.currentTarget)showDetail(false, currShowcase)}}>
             <div class="relative place-self-center bg-gray-50 rounded shadow z-50 m-5"
@@ -120,10 +122,10 @@
                             <p class="text-md">{currShowcase.details.desc}</p>
                         </div>
                         <div class="col-span-1 text-white">
-                            <h2 class="font-bold text-xl pt-3">Client:</h2>
+                            <h2 class="font-bold text-xl pt-3">Client</h2>
                             <p class="">{currShowcase.details.client.name}</p>
                             <br>
-                            <h2 class="font-bold text-xl">Frameworks:</h2>
+                            <h2 class="font-bold text-xl">Frameworks</h2>
                             {#each currShowcase.details.frameworks as framework}
                                 <p class="mt-2">{framework}</p>
                             {/each}
