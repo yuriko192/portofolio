@@ -1,14 +1,14 @@
 <script lang="ts">
     import {onMount} from "svelte";
-    import type {ProjectObj} from "../../types";
+    import type {ShowcaseObj} from "$lib/types";
 
-    let projectList: ProjectObj[] = [];
+    let projectList: ShowcaseObj[] = [];
 
 
     onMount(async () => {
         const response = await fetch('/data/works.json');
         let resultJson = await response.json();
-        let result:ProjectObj[] = resultJson["jobs"]
+        let result:ShowcaseObj[] = resultJson["jobs"]
         projectList = [...projectList, ...result];
 
         // console.log(projectList)

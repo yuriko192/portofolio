@@ -1,10 +1,9 @@
 <script lang="ts">
     import "./app.scss"
-    import type {scrambledTextAnimationObj, subJobType} from "../types.js";
+    import type {scrambledTextAnimationObj, subJobType} from "$lib/types";
     import {onMount} from "svelte";
-    import ProjectList from "$lib/components/ProjectList.svelte";
-    import WorkList from "$lib/components/WorkList.svelte";
-    import {LocalstorageSet} from "../utils";
+    import Showcases from "$lib/components/Showcases.svelte";
+    import {LocalstorageSet} from "$lib/utils";
     import selfImg from '$lib/assets/self.png';
 
     const DARK = 'dark'
@@ -232,8 +231,8 @@
         <div class="hidden col-span-4 sm:col-span-2 lg:col-span-1 col-span-4 sm:col-span-2 lg:col-span-1 col-span-2 sm:col-span-2 lg:col-span-1 col-span-2 sm:col-span-2 lg:col-span-1"></div>
     </div>
 
-    <ProjectList/>
-    <WorkList/>
+    <Showcases Title="Featured Projects" JsonURL="/data/projects.json"/>
+    <Showcases Title="Work Experiences" JsonURL="/data/works.json"/>
 
 
 </div>

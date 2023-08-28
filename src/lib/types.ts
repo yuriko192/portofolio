@@ -6,19 +6,18 @@ export interface subJobType {
 }
 
 
-export interface ProjectObj {
+export interface ShowcaseObj {
     image: string;
     title: string;
     desc: string;
-    details: ProjectDetailObj;
+    details: ShowcaseDetailObj;
 }
 
-export interface ProjectDetailObj {
+export interface ShowcaseDetailObj {
     desc: string;
     frameworks: Array<string>;
     images: Array<string>;
     client: ClientObj;
-
 }
 
 export interface ClientObj {
