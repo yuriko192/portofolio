@@ -7,7 +7,7 @@
       "details": {
         "desc": "Confins is a core banking system that I helped develop with the teams in AdIns (Advance Innovations) to help financial instituion manage large scale transactions. The system is used to help manage loan application, credit scoring, collateral appraisal, collection system, and many more. It's built using angularJS, SQL Server, ASP.NET, and RabbitMQ",
         "client": {
-          "name": "AdIns (Advance Innovations)",
+          "name": "Advance Innovations (AdIns)",
           "image": "./assets/Projects/AdIns.png"
         },
         "frameworks": [

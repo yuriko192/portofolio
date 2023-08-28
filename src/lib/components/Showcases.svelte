@@ -120,10 +120,12 @@
                             <p class="text-md">{currShowcase.details.desc}</p>
                         </div>
                         <div class="col-span-1 text-white">
-                            <h2 class="font-bold text-xl pt-3">Frameworks:</h2>
+                            <h2 class="font-bold text-xl pt-3">Client:</h2>
+                            <p class="">{currShowcase.details.client.name}</p>
+                            <br>
+                            <h2 class="font-bold text-xl">Frameworks:</h2>
                             {#each currShowcase.details.frameworks as framework}
-                                <br>
-                                <p class="">{framework}</p>
+                                <p class="mt-2">{framework}</p>
                             {/each}
                         </div>
                     </div>
