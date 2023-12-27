@@ -1,3 +1,5 @@
+
+
 export function LocalstorageSet(key: string,value: string) :boolean{
     if (typeof localStorage === 'undefined'){
         return false

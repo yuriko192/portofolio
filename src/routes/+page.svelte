@@ -234,5 +234,4 @@
     <Showcases Title="Featured Projects" JsonURL="/data/projects.json"/>
     <Showcases Title="Work Experiences" JsonURL="/data/works.json"/>
 
-
 </div>

@@ -113,7 +113,7 @@
                                on:click={(e)=>{if(e.target===e.currentTarget)showDetail(false, currShowcase)}}></i>
                         </div>
                         <div class="absolute BGImg"
-                             style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currShowcase.image+');'}"></div>
+                             style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currShowcase.details.images[0]+');'}"></div>
                     </div>
                     <div class="bg-gray-900 row-span-3 h-fit w-full p-3 grid-cols-4 gap-4 ShowcaseModalDesc">
                         <div class="col-span-3 text-white z-10">
