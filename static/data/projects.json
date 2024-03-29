@@ -1,24 +1,24 @@
 {
-  "projects": [
+  "data": [
     {
-      "image": "./assets/Projects/Confins.PNG",
-      "title": "Confins",
-      "desc": "A core banking system developed to be the backbone of Indonesian finances",
+      "image": "./assets/Projects/TokopediaPromo.png",
+      "title": "Promotion Rule Engine",
+      "desc": "An engine in Tokopedia that validate and calculate the promotion given to a user",
       "details": {
-        "desc": "Confins is a core banking system that I helped develop with the teams in AdIns (Advance Innovations) to help financial instituion manage large scale transactions. The system is used to help manage loan application, credit scoring, collateral appraisal, collection system, and many more. It's built using angularJS, SQL Server, ASP.NET, and RabbitMQ",
+        "desc": "Tokopedia Promotion Rule Engine is a promotion engine that I developed together with the team from Tokopedia that validate if a promo is valid to be used in a transaction according to various properties such as the price, shipping, user, etc. This engine is built to be high performance while still being configurable and dynamic as the number of usecases and transaction is very high with a high variety as well. The system is built using gRPC, Go, PostgreQL, and Redis",
         "client": {
-          "name": "AdIns (Advance Innovations)",
-          "image": "./assets/Projects/AdIns.png"
+          "name": "GoTo Tokopedia",
+          "image": "./assets/Projects/Tokopedia.png"
         },
         "frameworks": [
-          "AngularJS",
-          "SQL Server",
-          "ASP.NET",
-          "C#",
-          "RabbitMQ"
+          "gRPC",
+          "Go",
+          "PostgreQL",
+          "Redis"
         ],
         "images": [
-          "./assets/Projects/Confins.PNG"
+          "./assets/Projects/TokopediaPromo.png",
+          "./assets/Projects/TokopediaPlus.png"
         ]
       }
     },
@@ -71,6 +71,28 @@
         ],
         "images": [
           "./assets/Projects/TokopediaSite.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/Confins.PNG",
+      "title": "Confins",
+      "desc": "A core banking system developed to be the backbone of Indonesian finances",
+      "details": {
+        "desc": "Confins is a core banking system that I helped develop with the teams in AdIns (Advance Innovations) to help financial instituion manage large scale transactions. The system is used to help manage loan application, credit scoring, collateral appraisal, collection system, and many more. It's built using angularJS, SQL Server, ASP.NET, and RabbitMQ",
+        "client": {
+          "name": "Advance Innovations (AdIns)",
+          "image": "./assets/Projects/AdIns.png"
+        },
+        "frameworks": [
+          "AngularJS",
+          "SQL Server",
+          "ASP.NET",
+          "C#",
+          "RabbitMQ"
+        ],
+        "images": [
+          "./assets/Projects/Confins.PNG"
         ]
       }
     },

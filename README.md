@@ -1,38 +1,20 @@
-# create-svelte
+# Ivan's Portfolio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Site: [https://ivan19.netlify.app/](https://ivan19.netlify.app/)
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+Personal portfolio site, currently built using Sveltekit
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Make a new branch, and create a PR to the master
 
+To run the local dev environment, run one of these command
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+npm run dev # to access from a single device
+# OR
+npm run devHost # to access from another device in the network
 ```
 
-## Building
+The beta site will then be accessible in [netlify](https://app.netlify.com/)
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+once the PR is merged it will be deployed to [the site](https://ivan19.netlify.app/)
