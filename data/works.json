@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "image": "./assets/Projects/Confins.PNG",
+      "title": "PT. AdIns",
+      "desc": "Fullstack Developer - Develop a core banking system called Confins"
+    },
+    {
+      "image": "./assets/Projects/Tokopedia.png",
+      "title": "PT. Tokopedia",
+      "desc": "Software Engineer - Maintain and develop features for Tokopedia E-Commerce Website"
+    }
+  ]
+}

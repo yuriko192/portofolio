@@ -1,0 +1,208 @@
+{
+  "data": [
+    {
+      "image": "./assets/Projects/TokopediaPromo.png",
+      "title": "Promotion Rule Engine",
+      "desc": "An engine in Tokopedia that validate and calculate the promotion given to a user",
+      "details": {
+        "desc": "Tokopedia Promotion Rule Engine is a promotion engine that I developed together with the team from Tokopedia that validate if a promo is valid to be used in a transaction according to various properties such as the price, shipping, user, etc. This engine is built to be high performance while still being configurable and dynamic as the number of usecases and transaction is very high with a high variety as well. The system is built using gRPC, Go, PostgreQL, and Redis",
+        "client": {
+          "name": "GoTo Tokopedia",
+          "image": "./assets/Projects/Tokopedia.png"
+        },
+        "frameworks": [
+          "gRPC",
+          "Go",
+          "PostgreQL",
+          "Redis"
+        ],
+        "images": [
+          "./assets/Projects/TokopediaPromo.png",
+          "./assets/Projects/TokopediaPlus.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/TokopediaPlus.png",
+      "title": "Tokopedia Plus",
+      "desc": "A subscription service that gives exclusive benefits in Tokopedia",
+      "details": {
+        "desc": "Tokopedia Plus is a subscription service that I developed together with the team from Tokopedia that aims to help it's customer save more for every transaction in tokopedia by giving special benefits to it's subscriber. It's built using NSQ, gRPC, Go, Java, PostgreQL, Yugabyte, Redis, and React",
+        "client": {
+          "name": "GoTo Tokopedia",
+          "image": "./assets/Projects/Tokopedia.png"
+        },
+        "frameworks": [
+          "NSQ",
+          "gRPC",
+          "Go",
+          "Java",
+          "PostgreQL",
+          "Yugabyte",
+          "Redis",
+          "React"
+        ],
+        "images": [
+          "./assets/Projects/TokopediaPlus.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/TokopediaSite.png",
+      "title": "Coupon Management",
+      "desc": "A loyalty program by that aims to distribute suitable coupon to Tokopedia users",
+      "details": {
+        "desc": "Coupon Management is a benefit distribution system that I developed with the team in Tokopedia that aims to effectively distribute coupon to users in tokopedia by analyzing users behaviour, predicting their next transaction, and giving appropriate coupon with their next transaction. This system is built using Tensorflow, Flask, NSQ, gRPC, Go, Python, PostgreQL, Yugabyte, Redis, and React",
+        "client": {
+          "name": "GoTo Tokopedia",
+          "image": "./assets/Projects/Tokopedia.png"
+        },
+        "frameworks": [
+          "Tensorflow",
+          "Flask",
+          "NSQ",
+          "gRPC",
+          "Go",
+          "Python",
+          "PostgreQL",
+          "Yugabyte",
+          "Redis",
+          "React"
+        ],
+        "images": [
+          "./assets/Projects/TokopediaSite.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/Confins.PNG",
+      "title": "Confins",
+      "desc": "A core banking system developed to be the backbone of Indonesian finances",
+      "details": {
+        "desc": "Confins is a core banking system that I helped develop with the teams in AdIns (Advance Innovations) to help financial instituion manage large scale transactions. The system is used to help manage loan application, credit scoring, collateral appraisal, collection system, and many more. It's built using angularJS, SQL Server, ASP.NET, and RabbitMQ",
+        "client": {
+          "name": "Advance Innovations (AdIns)",
+          "image": "./assets/Projects/AdIns.png"
+        },
+        "frameworks": [
+          "AngularJS",
+          "SQL Server",
+          "ASP.NET",
+          "C#",
+          "RabbitMQ"
+        ],
+        "images": [
+          "./assets/Projects/Confins.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/Funcraft.PNG",
+      "title": "Funcraft",
+      "desc": "A task tracking gamification application aimed to increase performance and productivity",
+      "details": {
+        "desc": "Funcraft is a task tracking gamification aimed to increase performance and productivity. Funcraft was made as a submission for a business case competition by Mandiri Tunas Finance and became a finalist. Funcraft as a Web Application utilizing frameworks such as VueJs, ExpressJs, and MySql.",
+        "client": {
+          "name": "Mandiri Tunas Finance",
+          "image": "./assets/Projects/Funcraft.PNG"
+        },
+        "frameworks": [
+          "VueJs",
+          "Sass",
+          "MySql",
+          "Axios",
+          "ExpressJs"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/DeText.png",
+      "title": "DeText",
+      "desc": "OCR application made to extract text from images made using tensorflow and flask",
+      "details": {
+        "desc": "DeText is an OCR application made to extract text from images. Detext is an application submitted as the GUI for a thesis project involving AI Tech such as CNN, LSTM, and Mask R-CNN. DeText was made using frameworks such as Tensorflow, Keras, Flask, and Svelte",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "Tensorflow",
+          "Keras",
+          "Flask",
+          "Svelte",
+          "Tailwinds CSS"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/SpeedwagonMail.jpg",
+      "title": "Speed Mail",
+      "desc": "a Mail client inspired by Speedwagon made using Vue and Mongodb",
+      "details": {
+        "desc": "SpeedMail is a Mail client inspired by the anime character Speedwagon from the anime JoJo. Speedmail was made as a submission for a class project to better understand the web tech stack. SpeedMail was made using frameworks such as VueJs, ExpressJs, Bootstrap, and MongoDB.",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "VueJs",
+          "ExpressJs",
+          "Bootstrap",
+          "MongoDB",
+          "Sass",
+          "Axios",
+          "JQuery"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/MBank.png",
+      "title": "M-Bank",
+      "desc": "A redesigned BCA m banking application made using C#",
+      "details": {
+        "desc": "M-Bank is a redesigned BCA m banking application made using C#. M-Bank was made as a submission for a class project aimed to better understand how to create a desktop GUI application. M-Bank was made using frameworks such as ASP.Net, and SQL Server.",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "ASP.Net",
+          "SQL Server"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/HotelReservation.jpg",
+      "title": "Prabu Hotel",
+      "desc": "a prototype hotel reservation system made using java",
+      "details": {
+        "desc": "Prabu Hotel is a prototype hotel reservation system made using java. Prabu Hotel was made as a submission for a class project to better understand ways of implementing OOP. Prabu Hotel was made using frameworks such as Spring Boot, Apache Velocity, Maven, and Oracle DB",
+        "client": {
+          "name": "Universitas Tarumanagara",
+          "image": "./assets/Clients/Untar.PNG"
+        },
+        "frameworks": [
+          "Spring Boot",
+          "Apache Velocity",
+          "Maven",
+          "Oracle DB"
+        ],
+        "images": [
+          "./assets/Projects/Funcraft.PNG"
+        ]
+      }
+    }
+  ]
+}
