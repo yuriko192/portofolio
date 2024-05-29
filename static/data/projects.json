@@ -7,7 +7,7 @@
       "details": {
         "desc": "Tokopedia Promotion Rule Engine is a promotion engine that I developed together with the team from Tokopedia that validate if a promo is valid to be used in a transaction according to various properties such as the price, shipping, user, etc. This engine is built to be high performance while still being configurable and dynamic as the number of usecases and transaction is very high with a high variety as well. The system is built using gRPC, Go, PostgreQL, and Redis",
         "client": {
-          "name": "GoTo Tokopedia",
+          "name": "Tokopedia",
           "image": "./assets/Projects/Tokopedia.png"
         },
         "frameworks": [
@@ -29,7 +29,7 @@
       "details": {
         "desc": "Tokopedia Plus is a subscription service that I developed together with the team from Tokopedia that aims to help it's customer save more for every transaction in tokopedia by giving special benefits to it's subscriber. It's built using NSQ, gRPC, Go, Java, PostgreQL, Yugabyte, Redis, and React",
         "client": {
-          "name": "GoTo Tokopedia",
+          "name": "Tokopedia",
           "image": "./assets/Projects/Tokopedia.png"
         },
         "frameworks": [
@@ -54,7 +54,7 @@
       "details": {
         "desc": "Coupon Management is a benefit distribution system that I developed with the team in Tokopedia that aims to effectively distribute coupon to users in tokopedia by analyzing users behaviour, predicting their next transaction, and giving appropriate coupon with their next transaction. This system is built using Tensorflow, Flask, NSQ, gRPC, Go, Python, PostgreQL, Yugabyte, Redis, and React",
         "client": {
-          "name": "GoTo Tokopedia",
+          "name": "Tokopedia",
           "image": "./assets/Projects/Tokopedia.png"
         },
         "frameworks": [
@@ -136,7 +136,7 @@
           "Tailwinds CSS"
         ],
         "images": [
-          "./assets/Projects/Funcraft.PNG"
+          "./assets/Projects/DeText.png"
         ]
       }
     },
@@ -160,7 +160,7 @@
           "JQuery"
         ],
         "images": [
-          "./assets/Projects/Funcraft.PNG"
+          "./assets/Projects/SpeedwagonMail.jpg"
         ]
       }
     },
@@ -179,7 +179,7 @@
           "SQL Server"
         ],
         "images": [
-          "./assets/Projects/Funcraft.PNG"
+          "./assets/Projects/MBank.png"
         ]
       }
     },
@@ -200,7 +200,7 @@
           "Oracle DB"
         ],
         "images": [
-          "./assets/Projects/Funcraft.PNG"
+          "./assets/Projects/HotelReservation.jpg"
         ]
       }
     }

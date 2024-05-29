@@ -9,3 +9,10 @@ node_modules
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 /.netlify/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+*.iml
+out
+gen
