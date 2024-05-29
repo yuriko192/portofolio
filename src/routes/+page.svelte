@@ -1,10 +1,13 @@
 <script lang="ts">
-    import "./app.scss"
     import type {scrambledTextAnimationObj, subJobType} from "$lib/types";
     import {onMount} from "svelte";
     import Showcases from "$lib/components/Showcases.svelte";
     import {LocalstorageSet} from "$lib/utils";
     import selfImg from '$lib/assets/self.png';
+    import { Button } from '@/components/ui/button';
+    import { toggleMode, setMode} from "mode-watcher";
+    import Sun from "lucide-svelte/icons/sun";
+    import Moon from "lucide-svelte/icons/moon";
 
     const DARK = 'dark'
     const LIGHT = 'light'
@@ -48,11 +51,13 @@
         isDarkMode = !isDarkMode;
 
         if (isDarkMode) {
+            setMode(DARK)
             LocalstorageSet("theme", DARK)
-            document.documentElement.classList.add('dark')
+            document.documentElement.classList.add(DARK)
         } else {
+            setMode(LIGHT)
             LocalstorageSet("theme", LIGHT)
-            document.documentElement.classList.remove('dark')
+            document.documentElement.classList.remove(DARK)
         }
     }
 
@@ -96,6 +101,7 @@
     let prevCapture: number;
 
     function handleBlobMove(event: any) {
+        if (!blob){return;}
         const currTime = (new Date()).getTime();
 
         //in ms
@@ -134,8 +140,6 @@
     }
   }
 
-  //TODO
-  //ADD DARK & LIGHT MODE
   #blob {
     height: 34vmax;
     aspect-ratio: 1;
@@ -157,6 +161,123 @@
     z-index: 2;
     backdrop-filter: blur(12vmax);
   }
+
+
+
+  @keyframes animate {
+
+      0%{
+          transform: translateY(-130vh) rotate(0deg);
+          opacity: 1;
+          border-radius: 0;
+      }
+
+      100%{
+          transform: translateY(0) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+      }
+
+  }
+
+  .circles{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+  }
+
+  .circles li{
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(252, 233, 169, 0.5);
+      animation: animate 25s linear infinite;
+      bottom: -150px;
+
+  }
+
+
+  .circles li:nth-child(1){
+      left: 25%;
+      width: 80px;
+      height: 80px;
+      animation-delay: 0s;
+  }
+
+
+  .circles li:nth-child(2){
+      left: 10%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 2s;
+      animation-duration: 12s;
+  }
+
+  .circles li:nth-child(3){
+      left: 70%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 4s;
+  }
+
+  .circles li:nth-child(4){
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      animation-delay: 0s;
+      animation-duration: 18s;
+  }
+
+  .circles li:nth-child(5){
+      left: 65%;
+      width: 20px;
+      height: 20px;
+      animation-delay: 0s;
+  }
+
+  .circles li:nth-child(6){
+      left: 75%;
+      width: 110px;
+      height: 110px;
+      animation-delay: 3s;
+  }
+
+  .circles li:nth-child(7){
+      left: 35%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 7s;
+  }
+
+  .circles li:nth-child(8){
+      left: 50%;
+      width: 25px;
+      height: 25px;
+      animation-delay: 15s;
+      animation-duration: 45s;
+  }
+
+  .circles li:nth-child(9){
+      left: 20%;
+      width: 15px;
+      height: 15px;
+      animation-delay: 2s;
+      animation-duration: 35s;
+  }
+
+  .circles li:nth-child(10){
+      left: 85%;
+      width: 150px;
+      height: 150px;
+      animation-delay: 0s;
+      animation-duration: 11s;
+  }
+
 </style>
 
 <!--BACKGROUND ANIMATIONS-->
@@ -165,6 +286,21 @@
     {#if isDarkMode}
         <div id="blob" bind:this={blob}></div>
         <div id="blur"></div>
+        {:else }
+        <div class="relative w-full h-full">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div >
     {/if}
 </div>
 
@@ -186,28 +322,29 @@
             </a>
         </div>
         <div class="flex flex-row-reverse">
-            <!-- svelte-ignore a11y-click-events-have-key-events -->
-            <div class="relative rounded-full border border-black dark:border-slate-100 py-1 w-14 h-8 transition-transform duration-300"
-                 on:click={toggleDark}>
-                <div class={`absolute transition-transform ${isDarkMode ? 'translate-x-2' : 'translate-x-8'}`}>
-                    {#if isDarkMode}
-                        <i class="fa-regular fa-sun"></i>
-                    {:else}
-                        <i class="fa-regular fa-moon"></i>
-                    {/if}
+            <Button variant="outline"
+              class="rounded-full w-14 h-8 transition-transform duration-300 p-0 bg-transparent"
+              on:click={toggleDark}>
+                <div class={`flex relative transition-all ${isDarkMode ? 'translate-x-0' : 'translate-x-1'}`}>
+                    <Moon
+                      class="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all  dark:rotate-0 dark:scale-100"
+                    />
+                    <Sun
+                      class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+                    />
                 </div>
-            </div>
+            </Button>
         </div>
     </div>
     <!--    HERO TITLE-->
     <div class="flex py-5 align-middle flex-col sm:flex-row">
         <div class="shrink-0 m-auto mb-8 px-8">
-            <img class="rounded-full w-full max-w-[16rem] aspect-square" src={selfImg} alt="ivan wijaya">
+            <img class="rounded-full w-full max-w-[32rem] aspect-square" src={selfImg} alt="ivan wijaya">
         </div>
-        <div class="my-auto">
-            <h1 class="text-xl font-bold mb-4 text-justify">Hello There, My name is Ivan Wijaya</h1>
-            <p class="text-lg mb-4">💻 A passionate software engineer focused on web technologies</p>
-            <p class="text-base text-justify">
+        <div class="my-auto pr-32">
+            <h1 class="text-6xl font-bold mb-4 text-justify">Ivan Wijaya</h1>
+            <p class="text-2xl mb-4">💻 A passionate software engineer focused on web technologies</p>
+            <p class="text-lg text-base text-justify">
                 With a strong foundation in backend technologies, I specialize in creating robust and efficient solution
                 that's able to solve problems at any scale.
                 I occasionally also dive into the frontend development and craft interfaces that's intuitive and user
@@ -223,7 +360,7 @@
     <div class="my-4 grid gap-4 grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
         {#each subJobs as subJob, idx}
             <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-            <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 ${subJob.spans}`}
+            <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 text-xl ${subJob.spans}`}
                  on:mouseover={()=>{onSubJobsHover(idx)}}
                  on:mouseleave={()=>{subJobs[idx].desc = subJobs[idx].originalDesc}}
             >{subJob.icon} {subJob.desc}
