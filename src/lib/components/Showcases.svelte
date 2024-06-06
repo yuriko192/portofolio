@@ -1,6 +1,6 @@
 <script lang="ts">
-	import {onMount} from "svelte";
-	import type {ShowcaseObj} from "$lib/types";
+	import { onMount } from 'svelte';
+	import type { ShowcaseObj } from '$lib/types';
 	import { X } from 'lucide-svelte';
 	import { Button } from '@/components/ui/button';
 
@@ -13,7 +13,7 @@
 
 	function showDetail(cond: boolean, selectedShowcase: ShowcaseObj) {
 		if (!selectedShowcase.details) {
-			return
+			return;
 		}
 		isShowDetail = cond;
 		currShowcase = selectedShowcase;
@@ -23,10 +23,10 @@
 		try {
 			const response = await fetch(JsonURL);
 			let resultJson = await response.json();
-			let result: ShowcaseObj[] = resultJson["data"]
+			let result: ShowcaseObj[] = resultJson['data'];
 			ShowcaseList = [...ShowcaseList, ...result];
 		} catch (e) {
-			console.log(e)
+			console.log(e);
 		}
 
 	});
@@ -80,7 +80,8 @@
 					<div class="absolute BGImg"
 							 style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+showcase.image+');'}"></div>
 					<div class="absolute h-full w-full grid pb-16">
-						<h1 class="place-self-center text-3xl font-bold w-full text-center align-middle text-white">{showcase.title}</h1>
+						<h1
+							class="place-self-center text-3xl font-bold w-full text-center align-middle text-white">{showcase.title}</h1>
 					</div>
 					<div class="absolute dark:bg-gray-900 bg-gray-200 bottom-0 w-full h-2/5 p-3">
 						<p class="dark:text-white text-black">{showcase.desc}</p>
@@ -90,7 +91,8 @@
 					<div class="absolute w-full h-full dark-BG grid transition"
 							 on:click={()=>{showDetail(true, showcase)}}>
 						<div class="place-self-center overflow-hidden p-1">
-							<button class="invisible rounded-lg py-2 px-4 hover:bg-slate-600 active:bg-gray-100 text-gray-100 active:text-slate-600 outline outline-2 outline-gray-100 active:outline-slate-600 translate-y-10 transition-all">
+							<button
+								class="invisible rounded-lg py-2 px-4 hover:bg-slate-600 active:bg-gray-100 text-gray-100 active:text-slate-600 outline outline-2 outline-gray-100 active:outline-slate-600 translate-y-10 transition-all">
 								More Details
 							</button>
 						</div>
@@ -124,9 +126,12 @@
 							<p class="text-md">{currShowcase.details.desc}</p>
 						</div>
 						<div class="col-span-1 dark:text-white text-black">
-							<h2 class="font-bold text-xl pt-3">Client</h2>
-							<p class="">{currShowcase.details.client.name}</p>
-							<br>
+							{#if currShowcase.details.client}
+								<h2 class="font-bold text-xl pt-3">Client</h2>
+								<p class="">{currShowcase.details.client.name}</p>
+								<br>
+							{/if}
+
 							<h2 class="font-bold dark:text-white text-black">Frameworks</h2>
 							{#each currShowcase.details.frameworks as framework}
 								<p class="mt-2">{framework}</p>

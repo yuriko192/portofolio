@@ -8,6 +8,7 @@
     import { toggleMode, setMode} from "mode-watcher";
     import Sun from "lucide-svelte/icons/sun";
     import Moon from "lucide-svelte/icons/moon";
+    import { Github } from 'lucide-svelte';
 
     const DARK = 'dark'
     const LIGHT = 'light'
@@ -312,6 +313,19 @@
             <span>IVAN.W</span>
         </div>
         <div class="flex justify-items-center items-center mx-4">
+            <a href="https://github.com/Ivan-Wij"
+               class="
+               flex gap-2
+               rounded-lg py-1 px-3 hover:shadow
+               bg-transparent
+               dark:hover:text-slate-700 dark:hover:bg-slate-300 dark:text-white dark:border-white
+               hover:bg-slate-800 hover:text-slate-300 text-black border border-black
+               transition">
+                <Github />
+                Github
+            </a>
+        </div>
+        <div class="flex justify-items-center items-center mr-4">
             <a href="https://drive.google.com/file/d/1uVZdRZIvT5WF19So0d63yTEizPci3YvQ/view?usp=sharing"
                class="
                rounded-lg py-1 px-3 shadow-lg hover:shadow
