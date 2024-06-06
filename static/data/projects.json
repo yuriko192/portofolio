@@ -92,7 +92,7 @@
           "RabbitMQ"
         ],
         "images": [
-          "./assets/Projects/Confins.PNG"
+          "./assets/Projects/Confins_R3.jpg"
         ]
       }
     },
@@ -137,6 +137,22 @@
         ],
         "images": [
           "./assets/Projects/DeText.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/Homelab.png",
+      "title": "Homelab",
+      "desc": "a personal homelab used to host personal projects & apps",
+      "details": {
+        "desc": "This personal homelab is used to host multiple application such as a personal password manager, home media server, dns level adblock, web server, proxy manager, and many more. This homelab uses debian as it's OS, and mostly docker to run it's program.",
+        "frameworks": [
+          "Debian",
+          "Nginx",
+          "Adguard"
+        ],
+        "images": [
+          "./assets/Projects/Homelab.png"
         ]
       }
     },
