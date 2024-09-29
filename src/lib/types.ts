@@ -15,9 +15,15 @@ export interface ShowcaseObj {
 
 export interface ShowcaseDetailObj {
     desc: string;
+    showcase: URLObj;
     frameworks: Array<string>;
     images: Array<string>;
     client: ClientObj;
+}
+
+export interface URLObj {
+    title: string;
+    url: string;
 }
 
 export interface ClientObj {

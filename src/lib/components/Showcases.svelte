@@ -132,10 +132,18 @@
 								<br>
 							{/if}
 
-							<h2 class="font-bold dark:text-white text-black">Frameworks</h2>
-							{#each currShowcase.details.frameworks as framework}
-								<p class="mt-2">{framework}</p>
-							{/each}
+							{#if currShowcase.details.frameworks}
+								<h2 class="font-bold dark:text-white text-black">Frameworks</h2>
+								{#each currShowcase.details.frameworks as framework}
+									<p class="mt-2">{framework}</p>
+								{/each}
+								<br>
+							{/if}
+
+							{#if currShowcase.details.showcase}
+								<h2 class="font-bold dark:text-white text-black">Showcase</h2>
+								<a class="underline hover:text-slate-700 dark:hover:text-slate-400" href={currShowcase.details.showcase.url}>{currShowcase.details.showcase.title}</a>
+							{/if}
 						</div>
 					</div>
 				</div>
