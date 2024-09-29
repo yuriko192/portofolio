@@ -219,6 +219,45 @@
           "./assets/Projects/HotelReservation.jpg"
         ]
       }
+    },
+    {
+      "image": "./assets/Projects/Minesweeper.png",
+      "title": "Minesweeper",
+      "desc": "a small minesweeper game built using vanilla js and p5.js",
+      "details": {
+        "desc": "A recreation of the classic minesweeper game built using basic javascript to run the logic and p5.js library to render the playable field grid",
+        "showcase": {
+          "title": "Link to Showcase",
+          "url": "/games/minesweeper"
+        },
+        "frameworks": [
+          "P5.js",
+          "vanilla js"
+        ],
+        "images": [
+          "./assets/Projects/Minesweeper.png"
+        ]
+      }
+    },
+    {
+      "image": "./assets/Projects/Tetris.png",
+      "title": "Tetris",
+      "desc": "a small tetris game built using basic vanilla js, html, and css",
+      "details": {
+        "desc": "A recreation of the classic tetris game, built fully using vanilla js, html, and css. utilizing web worker to handle the background refresh, and update",
+        "showcase": {
+          "title": "Link to Showcase",
+          "url": "/games/tetris"
+        },
+        "frameworks": [
+          "html",
+          "css",
+          "vanilla js"
+        ],
+        "images": [
+          "./assets/Projects/Tetris.png"
+        ]
+      }
     }
   ]
 }
