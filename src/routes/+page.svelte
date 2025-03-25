@@ -8,7 +8,7 @@
     import { toggleMode, setMode} from "mode-watcher";
     import Sun from "lucide-svelte/icons/sun";
     import Moon from "lucide-svelte/icons/moon";
-    import { Github } from 'lucide-svelte';
+    import { Bomb, Github } from 'lucide-svelte';
 
     const DARK = 'dark'
     const LIGHT = 'light'
@@ -312,7 +312,20 @@
         <div class="flex flex-grow justify-items-center items-center font-bold">
             <span>IVAN.W</span>
         </div>
-        <div class="flex justify-items-center items-center mx-4">
+        <div class="flex justify-items-center items-center mr-4">
+            <a href="/games/new-minesweeper"
+               class="
+               flex gap-2
+               rounded-lg py-1 px-3 hover:shadow
+               bg-transparent
+               dark:hover:text-slate-700 dark:hover:bg-slate-300 dark:text-white dark:border-white
+               hover:bg-slate-800 hover:text-slate-300 text-black border border-black
+               transition">
+                <Bomb />
+                Games
+            </a>
+        </div>
+        <div class="flex justify-items-center items-center mr-4">
             <a href="https://github.com/Ivan-Wij"
                class="
                flex gap-2
@@ -374,7 +387,7 @@
     <div class="my-4 grid gap-4 grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
         {#each subJobs as subJob, idx}
             <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-            <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 text-xl ${subJob.spans}`}
+            <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 text-xl font-bold ${subJob.spans}`}
                  on:mouseover={()=>{onSubJobsHover(idx)}}
                  on:mouseleave={()=>{subJobs[idx].desc = subJobs[idx].originalDesc}}
             >{subJob.icon} {subJob.desc}
