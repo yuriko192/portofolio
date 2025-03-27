@@ -49,6 +49,7 @@
     });
 
     function toggleDark() {
+        debugger;
         isDarkMode = !isDarkMode;
 
         if (isDarkMode) {
@@ -351,7 +352,7 @@
         <div class="flex flex-row-reverse">
             <Button variant="outline"
               class="rounded-full w-14 h-8 transition-transform duration-300 p-0 bg-transparent"
-              on:click={toggleDark}>
+              onclick={toggleDark}>
                 <div class={`flex relative transition-all ${isDarkMode ? 'translate-x-0' : 'translate-x-1'}`}>
                     <Moon
                       class="h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all  dark:rotate-0 dark:scale-100"

@@ -122,7 +122,7 @@
 				<div class="grid grid-rows-5 h-full">
 					<div class="row-span-2 w-full flex items-center relative justify-between">
 						<div class="absolute top-4 right-4">
-							<Button variant="ghost" size="icon" class="text-white" on:click={(e)=>{showDetail(false, currShowcase)}}>
+							<Button variant="ghost" size="icon" class="text-white" onclick={(e)=>{showDetail(false, currShowcase)}}>
 								<X />
 							</Button>
 						</div>
