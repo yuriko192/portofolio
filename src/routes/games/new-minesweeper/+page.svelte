@@ -2,23 +2,23 @@
 	import { onMount } from 'svelte';
 	import { ArrowDownFromLine, ArrowRightFromLine, Bomb } from 'lucide-svelte';
 
-	let gameTick = 1;
+	let gameTick = $state(1);
 	let startTime = new Date();
-	let currTime = 0;
+	let currTime = $state(0);
 
-	let filled = false;
+	let filled = $state(false);
 
 	let board: {
 		state: any,
 		bombs: number,
 		x: number,
 		y: number
-	} = {
+	} = $state({
 		state: {},
 		bombs: 10,
 		x: 10,
 		y: 10
-	};
+	});
 
 	function gameUpdate(e: any) {
 		// console.log({ e, x });
@@ -96,7 +96,7 @@
 <div>
 	<div class="flex w-full justify-between">
 		<div>Board {gameTick} {currTime}</div>
-		<button on:click={()=>{filled = false}}
+		<button onclick={()=>{filled = false}}
 						class="
               flex gap-2 justify-center
                rounded-lg py-1 px-3 hover:shadow
@@ -121,20 +121,20 @@
 									<button class="
 							w-8 h-8 m-1 rounded
 							bg-gray-900
-							" on:click={reveal(x,y)}>
+							" onclick={reveal(x,y)} aria-label="cell">
 									</button>
 								{:else}
 									<button class="
 							w-8 h-8 m-1 rounded
 							bg-gray-700
-							" on:click={reveal(x,y)}>
+							" onclick={reveal(x,y)} aria-label="cell">
 									</button>
 								{/if}
 							{:else}
 								<button class="
 							w-8 h-8 m-1 rounded
 							bg-gray-500
-							" on:click={reveal(x,y)}>
+							" onclick={reveal(x,y)} aria-label="cell">
 								</button>
 							{/if}
 						{/each}
@@ -176,7 +176,7 @@
 					</div>
 				</div>
 				<div class="border-b my-4"></div>
-				<button on:click={startGame}
+				<button onclick={startGame}
 								class="
               flex gap-2 justify-center
                rounded-lg py-1 px-3 hover:shadow

@@ -14,9 +14,9 @@
     const LIGHT = 'light'
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    let isDarkMode = true
+    let isDarkMode = $state(true)
 
-    let subJobs: subJobType[] = [];
+    let subJobs: subJobType[] = $state([]);
 
     let currScrText: scrambledTextAnimationObj;
 
@@ -98,7 +98,7 @@
         }
     }
 
-    let blob: any;
+    let blob: any = $state();
     let prevCapture: number;
 
     function handleBlobMove(event: any) {
@@ -305,7 +305,7 @@
     {/if}
 </div>
 
-<div class="dark:text-slate-100 px-8 py-2 min-h-screen overflow-hidden" on:pointermove={handleBlobMove}>
+<div class="dark:text-slate-100 px-8 py-2 min-h-screen overflow-hidden" onpointermove={handleBlobMove}>
 
     <!--    NAVBAR-->
     <div class="flex mb-4 mt-4 gap-4s">
@@ -371,7 +371,7 @@
         <div class="my-auto pr-32">
             <h1 class="text-6xl font-bold mb-4 text-justify">Ivan Wijaya</h1>
             <p class="text-2xl mb-4">💻 A passionate software engineer focused on web technologies</p>
-            <p class="text-lg text-base text-justify">
+            <p class="text-lg text-justify">
                 With a strong foundation in backend technologies, I specialize in creating robust and efficient solution
                 that's able to solve problems at any scale.
                 I occasionally also dive into the frontend development and craft interfaces that's intuitive and user
@@ -386,10 +386,11 @@
     <!--    SUBJOBS-->
     <div class="my-4 grid gap-4 grid-flow-row-dense sm:grid-flow-col-dense grid-cols-4 grid-rows-2 lg:grid-rows-1">
         {#each subJobs as subJob, idx}
-            <!-- svelte-ignore a11y-mouse-events-have-key-events -->
+            <!-- svelte-ignore a11y_mouse_events_have_key_events -->
             <div class={`rounded py-1 px-1 bg-gray-200 dark:bg-gray-700 text-xl font-bold ${subJob.spans}`}
-                 on:mouseover={()=>{onSubJobsHover(idx)}}
-                 on:mouseleave={()=>{subJobs[idx].desc = subJobs[idx].originalDesc}}
+                 onmouseover={()=>{onSubJobsHover(idx)}}
+                 onmouseleave={()=>{subJobs[idx].desc = subJobs[idx].originalDesc}}
+                 role="complementary"
             >{subJob.icon} {subJob.desc}
             </div>
         {/each}

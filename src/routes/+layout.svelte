@@ -1,10 +1,12 @@
 <script>
 	import '../app.scss';
 	import { ModeWatcher } from "mode-watcher";
+	/** @type {{children?: import('svelte').Snippet}} */
+	let { children } = $props();
 
 </script>
 
 <ModeWatcher />
-<slot></slot>
+{@render children?.()}
 
 <style></style>

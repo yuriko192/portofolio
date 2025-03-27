@@ -1,17 +1,24 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { ShowcaseObj } from '$lib/types';
+	import type { ShowcaseDetailObj, ShowcaseObj } from '$lib/types';
 	import { X } from 'lucide-svelte';
 	import { Button } from '@/components/ui/button';
 
-	export let JsonURL: string;
-	export let Title: string;
+	interface Props {
+		JsonURL: string;
+		Title: string;
+	}
 
-	let isShowDetail = false;
-	let currShowcase: ShowcaseObj;
-	let ShowcaseList: ShowcaseObj[] = [];
+	let { JsonURL, Title }: Props = $props();
 
-	function showDetail(cond: boolean, selectedShowcase: ShowcaseObj) {
+	let isShowDetail = $state(false);
+	let currShowcase: ShowcaseObj|undefined = $state();
+	let ShowcaseList: ShowcaseObj[] = $state([]);
+
+	function showDetail(cond: boolean, selectedShowcase: ShowcaseObj|undefined) {
+		if (!selectedShowcase){
+			return;
+		}
 		if (!selectedShowcase.details) {
 			return;
 		}
@@ -89,9 +96,9 @@
 				</div>
 				{#if (showcase.details)}
 					<div class="absolute w-full h-full dark-BG grid transition"
-							 on:click={()=>{showDetail(true, showcase)}}>
+							 >
 						<div class="place-self-center overflow-hidden p-1">
-							<button
+							<button onclick={()=>{showDetail(true, showcase)}}
 								class="invisible rounded-lg py-2 px-4 hover:bg-slate-600 active:bg-gray-100 text-gray-100 active:text-slate-600 outline outline-2 outline-gray-100 active:outline-slate-600 translate-y-10 transition-all">
 								More Details
 							</button>
@@ -102,9 +109,12 @@
 		{/each}
 	</div>
 	{#if (isShowDetail)}
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<div class="fixed top-0 left-0 h-screen w-screen z-50 modalCont grid backdrop-blur p-4"
-				 on:click={(e)=>{if(e.target===e.currentTarget)showDetail(false, currShowcase)}}>
+				 onclick={(e)=>{if(e.target===e.currentTarget)showDetail(false, currShowcase)}}
+				 tabindex="0"
+				 role="button"
+		>
 			<div class="relative place-self-center bg-gray-50 rounded shadow z-50 m-5"
 					 style="width: min(50.375rem, 100%); height: min(100%, 84rem); overflow: auto">
 				<div class="absolute dark:bg-gray-900 bg-gray-200 w-full h-full -z-50">
@@ -117,32 +127,32 @@
 							</Button>
 						</div>
 						<div class="absolute BGImg"
-								 style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currShowcase.details.images[0]+');'}"></div>
+								 style="{'background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5) 100%), url('+currShowcase?.details.images[0]+');'}"></div>
 					</div>
 					<div class="bg-transparent h-fit w-full p-3 grid-cols-4 gap-4 ShowcaseModalDesc">
 						<div class="col-span-3 dark:text-white text-black z-10">
-							<h1 class="font-bold text-2xl py-3">{currShowcase.title}</h1>
+							<h1 class="font-bold text-2xl py-3">{currShowcase?.title}</h1>
 							<br>
-							<p class="text-md">{currShowcase.details.desc}</p>
+							<p class="text-md">{currShowcase?.details.desc}</p>
 						</div>
 						<div class="col-span-1 dark:text-white text-black">
-							{#if currShowcase.details.client}
+							{#if currShowcase?.details.client}
 								<h2 class="font-bold text-xl pt-3">Client</h2>
-								<p class="">{currShowcase.details.client.name}</p>
+								<p class="">{currShowcase?.details.client.name}</p>
 								<br>
 							{/if}
 
-							{#if currShowcase.details.frameworks}
+							{#if currShowcase?.details.frameworks}
 								<h2 class="font-bold dark:text-white text-black">Frameworks</h2>
-								{#each currShowcase.details.frameworks as framework}
+								{#each currShowcase?.details.frameworks as framework}
 									<p class="mt-2">{framework}</p>
 								{/each}
 								<br>
 							{/if}
 
-							{#if currShowcase.details.showcase}
+							{#if currShowcase?.details.showcase}
 								<h2 class="font-bold dark:text-white text-black">Showcase</h2>
-								<a class="underline hover:text-slate-700 dark:hover:text-slate-400" href={currShowcase.details.showcase.url}>{currShowcase.details.showcase.title}</a>
+								<a class="underline hover:text-slate-700 dark:hover:text-slate-400" href={currShowcase?.details.showcase.url}>{currShowcase?.details.showcase.title}</a>
 							{/if}
 						</div>
 					</div>
