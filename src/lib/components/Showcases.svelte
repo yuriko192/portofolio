@@ -90,8 +90,8 @@
 						<h1
 							class="place-self-center text-3xl font-bold w-full text-center align-middle text-white">{showcase.title}</h1>
 					</div>
-					<div class="absolute dark:bg-gray-900 bg-gray-200 bottom-0 w-full h-2/5 p-3">
-						<p class="dark:text-white text-black">{showcase.desc}</p>
+					<div class="absolute bg-transparent bottom-0 w-full h-2/5 p-3">
+						<p class="text-white">{showcase.desc}</p>
 					</div>
 				</div>
 				{#if (showcase.details)}
@@ -99,7 +99,7 @@
 							 >
 						<div class="place-self-center overflow-hidden p-1">
 							<button onclick={()=>{showDetail(true, showcase)}}
-								class="invisible rounded-lg py-2 px-4 hover:bg-slate-600 active:bg-gray-100 text-gray-100 active:text-slate-600 outline outline-2 outline-gray-100 active:outline-slate-600 translate-y-10 transition-all">
+								class="invisible rounded-lg py-2 px-4 hover:bg-zinc-600 active:bg-gray-100 text-gray-100 active:text-slate-600 outline outline-2 outline-gray-100 active:outline-slate-600 translate-y-10 transition-all">
 								More Details
 							</button>
 						</div>
@@ -117,7 +117,7 @@
 		>
 			<div class="relative place-self-center bg-gray-50 rounded shadow z-50 m-5"
 					 style="width: min(50.375rem, 100%); height: min(100%, 84rem); overflow: auto">
-				<div class="absolute dark:bg-gray-900 bg-gray-200 w-full h-full -z-50">
+				<div class="absolute dark:bg-zinc-800 bg-gray-200 w-full h-full -z-50">
 				</div>
 				<div class="grid grid-rows-5 h-full">
 					<div class="row-span-2 w-full flex items-center relative justify-between">
