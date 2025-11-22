@@ -9,7 +9,7 @@ class Tile {
 }
 
 class Board {
-    constructor(x, y, besar, bombs) {
+    constructor(x, y, cellSize, bombs) {
         if (bombs >= x * y) {
             console.log("Bombs have to be less than field size")
             return -1;
@@ -19,12 +19,12 @@ class Board {
         for (let i = 0; i < y; i++) {
             this.fields[i] = new Array(x);
             for (let ii = 0; ii < x; ii++) {
-                this.fields[i][ii] = new Tile(ii * besar, i * besar)
+                this.fields[i][ii] = new Tile(ii * cellSize, i * cellSize)
             }
         }
         this.x = x
         this.y = y
-        this.besar = besar
+        this.cellSize = cellSize
         this.clickedd = true;
         this.bombs = bombs
         this.unplayable = false
@@ -37,11 +37,11 @@ class Board {
             let y = this.bombarr[i][1]
             this.fields[y][x].reveal =true
             fill(255)
-            rect(0, 0, this.x * this.besar, this.y * this.besar)
+            rect(0, 0, this.x * this.cellSize, this.y * this.cellSize)
             textAlign(CENTER);
             textSize(50)
             fill(0)
-            text("GAMEOVER", this.x * this.besar / 2, this.y * this.besar / 2)
+            text("GAMEOVER", this.x * this.cellSize / 2, this.y * this.cellSize / 2)
 
         }
     }
@@ -54,21 +54,21 @@ class Board {
                 if (this.fields[i][ii].reveal) {
                     if (this.fields[i][ii].val == -1) {
                         fill(10)
-                        rect(x, y, this.besar, this.besar)
+                        rect(x, y, this.cellSize, this.cellSize)
                     } else {
                         fill(125)
-                        rect(x, y, this.besar, this.besar)
+                        rect(x, y, this.cellSize, this.cellSize)
                         textAlign(CENTER);
                         textSize(25)
                         fill(0)
-                        text(this.fields[i][ii].val, x + this.besar / 2, y + this.besar / 9 + (this.besar / 2))
+                        text(this.fields[i][ii].val, x + this.cellSize / 2, y + this.cellSize / 9 + (this.cellSize / 2))
                     }
                 } else if (this.fields[i][ii].flagged) {
                     fill(50)
-                    rect(x, y, this.besar, this.besar)
+                    rect(x, y, this.cellSize, this.cellSize)
                 } else {
                     fill(225)
-                    rect(x, y, this.besar, this.besar)
+                    rect(x, y, this.cellSize, this.cellSize)
                 }
 
             }
@@ -137,26 +137,26 @@ class Board {
     clicks(x, y, button) {
 
         try {
-            this.fields[floor(y / this.besar)][floor(x / this.besar)].val
+            this.fields[floor(y / this.cellSize)][floor(x / this.cellSize)].val
         }
         catch (err) {
             return
         }
 
         if (button) {
-            this.fields[floor(y / this.besar)][floor(x / this.besar)].flagged = !this.fields[floor(y / this.besar)][floor(x / this.besar)].flagged
+            this.fields[floor(y / this.cellSize)][floor(x / this.cellSize)].flagged = !this.fields[floor(y / this.cellSize)][floor(x / this.cellSize)].flagged
             return
         }
 
-        if (this.fields[floor(y / this.besar)][floor(x / this.besar)].flagged) {
+        if (this.fields[floor(y / this.cellSize)][floor(x / this.cellSize)].flagged) {
             return
         }
         if (this.clickedd) {
-            this.make(floor(x / this.besar), floor(y / this.besar))
+            this.make(floor(x / this.cellSize), floor(y / this.cellSize))
             this.clickedd = false
         }
-        if (this.fields[floor(y / this.besar)][floor(x / this.besar)].val == -1) {
-            this.fields[floor(y / this.besar)][floor(x / this.besar)].reveal = true
+        if (this.fields[floor(y / this.cellSize)][floor(x / this.cellSize)].val == -1) {
+            this.fields[floor(y / this.cellSize)][floor(x / this.cellSize)].reveal = true
             this.unplayable = true
             this.reveal()
             console.log("GAMEOVER")
@@ -164,7 +164,7 @@ class Board {
 
         }
 
-        this.check(floor(x / this.besar), floor(y / this.besar))
+        this.check(floor(x / this.cellSize), floor(y / this.cellSize))
     }
 
     wins() {
@@ -179,11 +179,11 @@ class Board {
         if (checkk) {
             this.unplayable = true
             fill(237, 34, 93)
-            rect(0, 0, this.x * this.besar, this.y * this.besar)
+            rect(0, 0, this.x * this.cellSize, this.y * this.cellSize)
             textAlign(CENTER);
             textSize(100)
             fill(0)
-            text("You Win", this.x * this.besar / 2, this.y * this.besar / 2)
+            text("You Win", this.x * this.cellSize / 2, this.y * this.cellSize / 2)
             console.log("You Win")
         }
         return checkk

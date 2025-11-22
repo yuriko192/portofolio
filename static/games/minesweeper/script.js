@@ -1,13 +1,13 @@
-var besar, atas, kanan, bombs;
+// var besar, height, kanan, bombs;
 var fields;
 
 function setup() {
-    atas = 10
-    kanan = 10
-    besar = 40
-    bombs = 10
-    createCanvas(kanan * besar + 1, atas * besar + 1)
-    fields = new Board(kanan, atas, besar, bombs)
+    const height = 10
+    const width = 10
+    const cellSize = 40
+    const bombs = 10
+    createCanvas(width * cellSize + 1, height * cellSize + 1)
+    fields = new Board(width, height, cellSize, bombs)
 }
 
 function draw() {
@@ -17,6 +17,7 @@ function draw() {
 
 function mousePressed() {
     if (!fields.unplayable) {
+        // from p5js
         if (mouseButton == LEFT) {
             fields.clicks(mouseX, mouseY, false)
         } else {
